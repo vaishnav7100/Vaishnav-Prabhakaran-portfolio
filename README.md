@@ -4,12 +4,12 @@ This is the portfolio website for Vaishnav Prabhakaran.
 
 ## Custom Domain Setup (Hostinger)
 
-To connect your custom domain (`vaishnavprabhakaran.com`) to this GitHub repository, follow these steps:
+To connect your custom domain (`vaishnavprabhakaran.in`) to this GitHub repository, follow these steps:
 
 1.  **GitHub Pages Adjustment**:
     *   Ensure the `CNAME` file is present in the repository (I have added this).
     *   Go to your GitHub Repository -> Settings -> Pages.
-    *   Ensure "Custom domain" is set to `vaishnavprabhakaran.com`.
+    *   Ensure "Custom domain" is set to `vaishnavprabhakaran.in`.
     *   Check "Enforce HTTPS".
 
 2.  **Hostinger DNS Configuration**:

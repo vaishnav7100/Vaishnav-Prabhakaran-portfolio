@@ -1,1670 +1,284 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://vaishnavprabhakaran.com/</loc>
+    <loc>https://vaishnavprabhakaran.in/</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/alappuzha.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/alappuzha.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/ernakulam.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/ernakulam.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/idukki.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/idukki.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kannur.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/kannur.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kasaragod.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/kasaragod.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kollam.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/kollam.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kottayam.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/kottayam.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kozhikode.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/kozhikode.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/malappuram.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/malappuram.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/palakkad.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/palakkad.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/pathanamthitta.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/pathanamthitta.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thiruvananthapuram.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/thiruvananthapuram.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thrissur.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/thrissur.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/wayanad.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/wayanad.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kochi.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/kochi.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/trivandrum.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/trivandrum.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/calicut.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/calicut.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/alleppey.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/alleppey.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/munnar.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/munnar.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/varkala.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/varkala.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/guruvayur.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/guruvayur.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thalassery.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/thalassery.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/ponnani.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/ponnani.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/vatakara.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/vatakara.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kanhangad.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/kanhangad.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/payyanur.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/payyanur.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/koyilandy.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/koyilandy.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/neyyattinkara.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/neyyattinkara.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/manjeri.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/manjeri.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/nedumangad.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/nedumangad.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/tirur.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/tirur.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/punalur.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/punalur.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/muvattupuzha.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/muvattupuzha.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/chengannur.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/chengannur.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/changanassery.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/changanassery.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thodupuzha.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/thodupuzha.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/chalakudy.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/chalakudy.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kodungallur.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/kodungallur.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/perinthalmanna.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/perinthalmanna.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kottarakkara.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/kottarakkara.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/nilambur.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/nilambur.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/attingal.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/attingal.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/mattannur.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/mattannur.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/sultan-bathery.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/sultan-bathery.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kalpetta.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/kalpetta.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vaishnavprabhakaran.com/locations/mananthavady.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/alappuzha.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/ernakulam.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/idukki.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kannur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kasaragod.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kollam.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kottayam.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kozhikode.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/malappuram.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/palakkad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/pathanamthitta.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thiruvananthapuram.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thrissur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/wayanad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kochi.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/trivandrum.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/calicut.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/alleppey.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/munnar.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/varkala.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/guruvayur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thalassery.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/ponnani.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/vatakara.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kanhangad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/payyanur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/koyilandy.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/neyyattinkara.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/manjeri.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/nedumangad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/tirur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/punalur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/muvattupuzha.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/chengannur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/changanassery.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thodupuzha.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/chalakudy.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kodungallur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/perinthalmanna.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kottarakkara.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/nilambur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/attingal.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/mattannur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/sultan-bathery.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kalpetta.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/mananthavady.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/alappuzha.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/ernakulam.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/idukki.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kannur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kasaragod.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kollam.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kottayam.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kozhikode.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/malappuram.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/palakkad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/pathanamthitta.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thiruvananthapuram.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thrissur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/wayanad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kochi.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/trivandrum.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/calicut.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/alleppey.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/munnar.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/varkala.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/guruvayur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thalassery.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/ponnani.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/vatakara.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kanhangad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/payyanur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/koyilandy.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/neyyattinkara.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/manjeri.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/nedumangad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/tirur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/punalur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/muvattupuzha.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/chengannur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/changanassery.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thodupuzha.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/chalakudy.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kodungallur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/perinthalmanna.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kottarakkara.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/nilambur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/attingal.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/mattannur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/sultan-bathery.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kalpetta.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/mananthavady.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/alappuzha.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/ernakulam.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/idukki.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kannur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kasaragod.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kollam.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kottayam.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kozhikode.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/malappuram.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/palakkad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/pathanamthitta.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thiruvananthapuram.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thrissur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/wayanad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kochi.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/trivandrum.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/calicut.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/alleppey.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/munnar.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/varkala.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/guruvayur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thalassery.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/ponnani.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/vatakara.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kanhangad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/payyanur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/koyilandy.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/neyyattinkara.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/manjeri.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/nedumangad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/tirur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/punalur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/muvattupuzha.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/chengannur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/changanassery.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thodupuzha.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/chalakudy.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kodungallur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/perinthalmanna.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kottarakkara.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/nilambur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/attingal.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/mattannur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/sultan-bathery.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kalpetta.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/mananthavady.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/alappuzha.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/ernakulam.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/idukki.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kannur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kasaragod.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kollam.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kottayam.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kozhikode.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/malappuram.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/palakkad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/pathanamthitta.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thiruvananthapuram.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thrissur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/wayanad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kochi.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/trivandrum.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/calicut.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/alleppey.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/munnar.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/varkala.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/guruvayur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thalassery.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/ponnani.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/vatakara.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kanhangad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/payyanur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/koyilandy.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/neyyattinkara.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/manjeri.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/nedumangad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/tirur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/punalur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/muvattupuzha.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/chengannur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/changanassery.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thodupuzha.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/chalakudy.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kodungallur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/perinthalmanna.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kottarakkara.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/nilambur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/attingal.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/mattannur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/sultan-bathery.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kalpetta.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/mananthavady.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/alappuzha.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/ernakulam.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/idukki.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kannur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kasaragod.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kollam.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kottayam.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kozhikode.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/malappuram.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/palakkad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/pathanamthitta.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thiruvananthapuram.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thrissur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/wayanad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kochi.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/trivandrum.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/calicut.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/alleppey.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/munnar.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/varkala.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/guruvayur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thalassery.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/ponnani.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/vatakara.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kanhangad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/payyanur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/koyilandy.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/neyyattinkara.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/manjeri.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/nedumangad.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/tirur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/punalur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/muvattupuzha.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/chengannur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/changanassery.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/thodupuzha.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/chalakudy.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kodungallur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/perinthalmanna.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kottarakkara.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/nilambur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/attingal.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/mattannur.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/sultan-bathery.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/kalpetta.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://vaishnavprabhakaran.com/locations/mananthavady.html</loc>
+    <loc>https://vaishnavprabhakaran.in/locations/mananthavady.html</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

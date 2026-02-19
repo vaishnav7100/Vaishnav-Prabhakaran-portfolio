@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Configuration
-const BASE_URL = 'https://vaishnavprabhakaran.com';
+const BASE_URL = 'https://vaishnavprabhakaran.in';
 const OUTPUT_DIR = path.join(__dirname, 'locations');
 const SITEMAP_PATH = path.join(__dirname, 'sitemap.xml');
 const TEMPLATE_PATH = path.join(__dirname, 'index.html');

@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://vaishnavprabhakaran.com/sitemap.xml
+Sitemap: https://vaishnavprabhakaran.in/sitemap.xml
