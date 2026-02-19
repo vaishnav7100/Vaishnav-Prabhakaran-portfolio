@@ -7,43 +7,45 @@
 const cursor = document.getElementById('cursor');
 const cursorFollower = document.getElementById('cursorFollower');
 
-let mouseX = 0, mouseY = 0;
-let followerX = 0, followerY = 0;
+// Only run custom cursor logic on devices that support hover (desktop)
+if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    let mouseX = 0, mouseY = 0;
+    let followerX = 0, followerY = 0;
 
-document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    // Use transform instead of left/top — GPU only, no layout reflow
-    cursor.style.transform = `translate(calc(-50% + ${mouseX}px), calc(-50% + ${mouseY}px)) translateZ(0)`;
-});
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        // Use transform instead of left/top — GPU only, no layout reflow
+        cursor.style.transform = `translate(calc(-50% + ${mouseX}px), calc(-50% + ${mouseY}px)) translateZ(0)`;
+    });
 
-function animateFollower() {
-    followerX += (mouseX - followerX) * 0.12;
-    followerY += (mouseY - followerY) * 0.12;
-    // Use transform instead of left/top — GPU only, no layout reflow
-    cursorFollower.style.transform = `translate(calc(-50% + ${followerX}px), calc(-50% + ${followerY}px)) translateZ(0)`;
-    requestAnimationFrame(animateFollower);
+    function animateFollower() {
+        followerX += (mouseX - followerX) * 0.12;
+        followerY += (mouseY - followerY) * 0.12;
+        // Use transform instead of left/top — GPU only, no layout reflow
+        cursorFollower.style.transform = `translate(calc(-50% + ${followerX}px), calc(-50% + ${followerY}px)) translateZ(0)`;
+        requestAnimationFrame(animateFollower);
+    }
+    animateFollower();
+
+    // Cursor hover effects
+    document.querySelectorAll('a, button, .pill, .project-card, .service-card, .skill-category').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.style.width = '20px';
+            cursor.style.height = '20px';
+            cursorFollower.style.width = '50px';
+            cursorFollower.style.height = '50px';
+            cursorFollower.style.borderColor = 'rgba(168, 85, 247, 0.8)';
+        });
+        el.addEventListener('mouseleave', () => {
+            cursor.style.width = '10px';
+            cursor.style.height = '10px';
+            cursorFollower.style.width = '36px';
+            cursorFollower.style.height = '36px';
+            cursorFollower.style.borderColor = 'rgba(168, 85, 247, 0.5)';
+        });
+    });
 }
-animateFollower();
-
-
-// Cursor hover effects
-document.querySelectorAll('a, button, .pill, .project-card, .service-card, .skill-category').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-        cursor.style.width = '20px';
-        cursor.style.height = '20px';
-        cursorFollower.style.width = '50px';
-        cursorFollower.style.height = '50px';
-        cursorFollower.style.borderColor = 'rgba(168, 85, 247, 0.8)';
-    });
-    el.addEventListener('mouseleave', () => {
-        cursor.style.width = '10px';
-        cursor.style.height = '10px';
-        cursorFollower.style.width = '36px';
-        cursorFollower.style.height = '36px';
-        cursorFollower.style.borderColor = 'rgba(168, 85, 247, 0.5)';
-    });
-});
 
 // ===== CARD GLOW (direct CSS var on card — no separate element, no compositing bleed) =====
 document.querySelectorAll('.glass-card').forEach(card => {
