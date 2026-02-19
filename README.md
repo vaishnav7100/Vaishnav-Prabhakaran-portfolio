@@ -39,3 +39,17 @@ To verify your domain (`vaishnavprabhakaran.in`) on Google Search Console:
         *   **Value**: [Paste the Google code here]
         *   **TTL**: Default
     *   Wait a few minutes and click "Verify" in GSC.
+
+## Troubleshooting Indexing & SSL
+
+If Google Search Console shows **"Failed: Invalid server SSL certificate"**:
+
+1.  **This is normal for new domains.** GitHub Pages takes up to 24-48 hours to issue the SSL certificate after a domain change.
+2.  **Check Status**:
+    *   Go to your repository **Settings** > **Pages**.
+    *   Look under "Custom domain".
+    *   If it says "TLS Certificate is being provisioned" (yellow), just wait.
+    *   If there is an error (red), click "Remove" and re-add `vaishnavprabhakaran.in`, then save.
+    *   Ensure **"Enforce HTTPS"** is checked (it might be disabled until the certificate is ready).
+3.  **Verify DNS**: Ensure your Hostinger DNS has the 4 A records and 1 CNAME record listed above.
+4.  Once the certificate is active (you can access `https://vaishnavprabhakaran.in` without a security warning), go back to GSC and click **"Test Live URL"** again.
