@@ -85,7 +85,7 @@ LOCATIONS.forEach(location => {
 
     // 4. Update Canonical Link
     const pageUrl = `${BASE_URL}/locations/${fileName}`;
-    pageContent = pageContent.replace(/<link rel="canonical" href=".*?" \/>/, `<link rel="canonical" href="${pageUrl}" />`);
+    pageContent = pageContent.replace(/<link rel="canonical" href=".*?" \/>/, `<link rel="canonical" href="${pageUrl}" />\n  <link rel="icon" type="image/png" href="../vaishnav.png">`);
 
     // 5. Update Open Graph & Twitter
     pageContent = pageContent.replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${title}" />`);

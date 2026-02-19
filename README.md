@@ -22,3 +22,20 @@ To connect your custom domain (`vaishnavprabhakaran.in`) to this GitHub reposito
         *   Type: `A`, Name: `@`, Points to: `185.199.111.153`
     *   **Add** a CNAME record for `www`:
         *   Type: `CNAME`, Name: `www`, Points to: `vaishnav7100.github.io`
+
+## Google Search Console Verification
+
+To verify your domain (`vaishnavprabhakaran.in`) on Google Search Console:
+
+1.  Go to [Google Search Console](https://search.google.com/search-console).
+2.  Add your property: `https://vaishnavprabhakaran.in`.
+3.  Choose **Domain** property type (recommended) or **URL prefix**.
+4.  **Verification Method (DNS)**:
+    *   Copy the TXT record provided by Google (starts with `google-site-verification=...`).
+    *   Go to your Hostinger DNS Zone Editor.
+    *   Add a new record:
+        *   **Type**: `TXT`
+        *   **Name**: `@`
+        *   **Value**: [Paste the Google code here]
+        *   **TTL**: Default
+    *   Wait a few minutes and click "Verify" in GSC.
