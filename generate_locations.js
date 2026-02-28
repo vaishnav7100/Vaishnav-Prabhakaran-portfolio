@@ -48,10 +48,18 @@ const slugify = (text) => text.toString().toLowerCase()
     .replace(/^-+/, '')             // Trim - from start of text
     .replace(/-+$/, '');            // Trim - from end of text
 
-// SITEMAP CONTENT BUILDER
-let sitemapContent = fs.readFileSync(SITEMAP_PATH, 'utf8');
-// Remove closing tag to append new URLs
-sitemapContent = sitemapContent.replace('</urlset>', '');
+// SITEMAP — Build fresh from scratch (do NOT read existing file to avoid duplicate accumulation)
+const today = new Date().toISOString().split('T')[0];
+let sitemapUrls = [];
+
+// Add homepage first
+sitemapUrls.push(`
+  <url>
+    <loc>${BASE_URL}/</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>`);
 
 // Generate Pages
 console.log('🚀 Starting page generation...');
@@ -59,56 +67,57 @@ console.log('🚀 Starting page generation...');
 let pageCount = 0;
 
 LOCATIONS.forEach(location => {
-    // For each location, we create a specialized page.
-    // We'll create a generic "location page" that targets ALL keywords in its meta tags/content,
-    // rather than creating 500+ pages (Location * Keyword), which might look like spam.
-    // Instead, we create ONE high-quality page per location: /locations/kannur.html
-
     const locationSlug = slugify(location);
     const fileName = `${locationSlug}.html`;
     const filePath = path.join(OUTPUT_DIR, fileName);
+    const pageUrl = `${BASE_URL}/locations/${fileName}`;
 
     // Customize Content
     let pageContent = template;
 
     // 1. Update Title
-    const title = `Top ${KEYWORDS[0]} in ${location} | Mobile App & Web Development`;
+    const title = `Flutter & Mobile App Developer in ${location}, Kerala | Vaishnav Prabhakaran`;
     pageContent = pageContent.replace(/<title>.*<\/title>/, `<title>${title}</title>`);
 
     // 2. Update Meta Description
-    const description = `Looking for the best ${KEYWORDS.join(', ')} in ${location}? Vaishnav Prabhakaran delivers high-performance mobile apps and AI web solutions. Contact now!`;
-    pageContent = pageContent.replace(/<meta name="description" content=".*?" \/>/, `<meta name="description" content="${description}" />`);
+    const description = `Hire Vaishnav Prabhakaran – expert Flutter developer & mobile app developer in ${location}, Kerala. Specializing in Android/iOS app development, Next.js, and AI-powered solutions. Available for freelance & startup projects.`;
+    pageContent = pageContent.replace(/<meta name="description"\s*\n?\s*content=".*?" \/>/, `<meta name="description"\n    content="${description}" />`);
 
     // 3. Update Keywords
-    const specificKeywords = KEYWORDS.map(k => `${k} in ${location}`).join(', ') + `, ${location}, Kerala`;
-    pageContent = pageContent.replace(/<meta name="keywords" content=".*?" \/>/, `<meta name="keywords" content="${specificKeywords}" />`);
+    const specificKeywords = `Flutter Developer ${location}, Mobile App Developer ${location}, App Developer ${location}, Flutter Developer Kerala, Mobile App Developer Kerala, Android Developer ${location}, iOS Developer ${location}, hire Flutter developer ${location}, ${location} app development, ${location} Kerala`;
+    pageContent = pageContent.replace(/<meta name="keywords"\s*\n?\s*content=".*?" \/>/, `<meta name="keywords"\n    content="${specificKeywords}" />`);
 
-    // 4. Update Canonical Link
-    const pageUrl = `${BASE_URL}/locations/${fileName}`;
-    pageContent = pageContent.replace(/<link rel="canonical" href=".*?" \/>/, `<link rel="canonical" href="${pageUrl}" />\n  <link rel="icon" type="image/svg+xml" href="../favicon.svg">`);
+    // 4. Update Canonical Link — self-referencing (correct per-location URL)
+    pageContent = pageContent.replace(/<link rel="canonical" href=".*?" \/>/, `<link rel="canonical" href="${pageUrl}" />`);
+    // Add favicon path for locations subdirectory
+    pageContent = pageContent.replace(/<link rel="icon" type="image\/svg\+xml" href="favicon\.svg">/, `<link rel="icon" type="image/svg+xml" href="../favicon.svg">`);
 
     // 5. Update Open Graph & Twitter
     pageContent = pageContent.replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${title}" />`);
-    pageContent = pageContent.replace(/<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${description}" />`);
+    pageContent = pageContent.replace(/<meta property="og:description"\s*\n?\s*content=".*?" \/>/, `<meta property="og:description"\n    content="${description}" />`);
     pageContent = pageContent.replace(/<meta property="og:url" content=".*?" \/>/, `<meta property="og:url" content="${pageUrl}" />`);
 
     pageContent = pageContent.replace(/<meta property="twitter:title" content=".*?" \/>/, `<meta property="twitter:title" content="${title}" />`);
-    pageContent = pageContent.replace(/<meta property="twitter:description" content=".*?" \/>/, `<meta property="twitter:description" content="${description}" />`);
+    pageContent = pageContent.replace(/<meta property="twitter:description"\s*\n?\s*content=".*?" \/>/, `<meta property="twitter:description"\n    content="${description}" />`);
     pageContent = pageContent.replace(/<meta property="twitter:url" content=".*?" \/>/, `<meta property="twitter:url" content="${pageUrl}" />`);
 
-    // 6. Content Injection (Crucial for SEO relevance)
-    // We'll inject a location-specific H1 or Intro if possible, or append a footer section.
-    // Let's replace the Hero Title slightly to include location.
+    // 6. Inject location-specific visible banner AFTER <body> tag
+    // This gives each page genuinely unique content, crucial for Google to treat them as distinct pages
+    const locationBanner = `
+  <!-- ===== LOCATION BANNER (SEO) ===== -->
+  <div class="location-seo-banner" role="complementary" aria-label="Service location">
+    <div class="location-seo-inner">
+      <i class="fas fa-map-marker-alt"></i>
+      <div>
+        <h2 class="location-seo-title">Flutter &amp; Mobile App Developer in <span>${location}, Kerala</span></h2>
+        <p class="location-seo-desc">Looking to hire a top Flutter developer in ${location}? Vaishnav Prabhakaran delivers expert Android &amp; iOS app development, web applications, and AI-powered solutions to businesses and startups across ${location} and all of Kerala.</p>
+      </div>
+    </div>
+  </div>`;
 
-    // Regex to find "Hi, I'm Vaishnav" and append location context
-    // safe replacement for the typewriter area?
-
-    // User requested NO visible banner. We will rely on metadata and title for SEO.
-    // If we want to add hidden text or subtle changes, we can do it here, but for now we keep the UI identical.
-
+    pageContent = pageContent.replace(/<body>(\s*)/, `<body>\n${locationBanner}\n`);
 
     // 7. Fix Relative Paths (CSS/Images/JS)
-    // Since these files are in /locations/, we need to step back up ../
     pageContent = pageContent.replace(/href="styles.css"/g, 'href="../styles.css"');
     pageContent = pageContent.replace(/src="script.js"/g, 'src="../script.js"');
     pageContent = pageContent.replace(/src="vaishnav.png"/g, 'src="../vaishnav.png"');
@@ -118,21 +127,24 @@ LOCATIONS.forEach(location => {
     fs.writeFileSync(filePath, pageContent);
     console.log(`✅ Generated: ${fileName}`);
 
-    // Add to Sitemap
-    const date = new Date().toISOString().split('T')[0];
-    sitemapContent += `
+    // Add to sitemap URLs array (no duplicates possible since we build fresh)
+    sitemapUrls.push(`
   <url>
     <loc>${pageUrl}</loc>
-    <lastmod>${date}</lastmod>
+    <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>`;
+  </url>`);
 
     pageCount++;
 });
 
-// Close Sitemap
-sitemapContent += '\n</urlset>';
+// Write clean sitemap from scratch
+const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${sitemapUrls.join('')}
+</urlset>`;
+
 fs.writeFileSync(SITEMAP_PATH, sitemapContent);
 
-console.log(`\n🎉 Success! Generated ${pageCount} location pages and updated sitemap.xml.`);
+console.log(`\n🎉 Success! Generated ${pageCount} location pages and rebuilt sitemap.xml cleanly.`);
+console.log(`📊 Sitemap now has ${sitemapUrls.length} unique URLs (1 homepage + ${pageCount} location pages).`);

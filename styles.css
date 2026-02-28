@@ -2004,3 +2004,105 @@ body:hover .cursor {
     opacity: 1;
   }
 }
+
+/* ===== LOCATION SEO BANNER (City Pages) ===== */
+.location-seo-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  background: rgba(5, 8, 22, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(124, 58, 237, 0.25);
+  padding: 10px 24px;
+}
+
+.location-seo-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.location-seo-banner>.location-seo-inner>i {
+  color: var(--purple-light);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.location-seo-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1px 0;
+  line-height: 1.3;
+}
+
+.location-seo-title span {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.location-seo-desc {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 800px;
+}
+
+@media (max-width: 768px) {
+  .location-seo-banner {
+    padding: 8px 16px;
+  }
+
+  .location-seo-desc {
+    display: none;
+  }
+
+  .location-seo-title {
+    font-size: 0.78rem;
+  }
+}
+
+/* ===== FOOTER SERVICE AREA (SEO) ===== */
+.footer-service-area {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 16px;
+  padding-top: 16px;
+  text-align: center;
+}
+
+.footer-service-area-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.footer-service-area-cities {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  line-height: 2;
+}
+
+.footer-service-area-cities a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-service-area-cities a:hover {
+  color: var(--purple-light);
+}
