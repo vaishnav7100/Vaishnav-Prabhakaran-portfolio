@@ -162,7 +162,7 @@ navLinksContainer.querySelectorAll('.nav-link').forEach(link => {
 const typewriterEl = document.getElementById('typewriter');
 const phrases = [
     'Flutter Developer',
-    'CTO at Zowfity',
+    'Web Developer',
     'Tech Enthusiast',
     'Mobile App Creator',
     'AI Integrator',
