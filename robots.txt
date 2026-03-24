@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://vaishnavprabhakaran.in/sitemap.xml
+Host: https://vaishnavprabhakaran.in
