@@ -364,7 +364,7 @@ UNIQUE_LOCATIONS.forEach(location => {
     </div>
   </div>`;
 
-    pageContent = pageContent.replace(/<body>(\s*)/, `<body>\n${locationBanner}\n`);
+    pageContent = pageContent.replace(/<body>/, `<body>\n${locationBanner}`);
 
     // 8. Inject location-specific content section BEFORE the footer
     const locationContent = generateLocationContent(location);
@@ -375,6 +375,8 @@ UNIQUE_LOCATIONS.forEach(location => {
     pageContent = pageContent.replace(/src="script.js"/g, 'src="../script.js"');
     pageContent = pageContent.replace(/src="vaishnav.png"/g, 'src="../vaishnav.png"');
     pageContent = pageContent.replace(/src="media__1771423611621.png"/g, 'src="../media__1771423611621.png"');
+    // Fix preload path for locations
+    pageContent = pageContent.replace(/href="vaishnav.png"/g, 'href="../vaishnav.png"');
 
     // Write File
     fs.writeFileSync(filePath, pageContent);
