@@ -14,38 +14,50 @@ const KEYWORDS = [
     'Web Developer',
     'Android Developer',
     'iOS Developer',
-    'Next.js Developer',
     'App Developer',
-    'Freelance App Developer'
+    'Freelance App Developer',
+    'Flutter Developer Near Me',
+    'Mobile App Developer Near Me',
+    'App Developer Near Me'
 ];
 
 const LOCATIONS = [
-    // Kerala Districts
+    // ===== KERALA — Districts =====
     'Alappuzha', 'Ernakulam', 'Idukki', 'Kannur', 'Kasaragod',
     'Kollam', 'Kottayam', 'Kozhikode', 'Malappuram', 'Palakkad',
     'Pathanamthitta', 'Thiruvananthapuram', 'Thrissur', 'Wayanad',
-    // Kerala Cities/Towns
+    // Kerala — Cities/Towns
     'Kochi', 'Trivandrum', 'Calicut', 'Alleppey', 'Munnar', 'Varkala',
     'Guruvayur', 'Thalassery', 'Ponnani', 'Vatakara', 'Kanhangad',
     'Payyanur', 'Koyilandy', 'Neyyattinkara', 'Manjeri', 'Nedumangad',
     'Tirur', 'Punalur', 'Muvattupuzha', 'Chengannur', 'Changanassery',
     'Thodupuzha', 'Chalakudy', 'Kodungallur', 'Perinthalmanna', 'Kottarakkara',
     'Nilambur', 'Attingal', 'Mattannur', 'Sultan Bathery', 'Kalpetta', 'Mananthavady',
-    // --- MAJOR INDIAN CITIES (India-wide SEO) ---
-    'Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Chennai',
-    'Kolkata', 'Pune', 'Ahmedabad', 'Jaipur', 'Lucknow',
-    'Surat', 'Nagpur', 'Indore', 'Bhopal', 'Vadodara',
-    'Chandigarh', 'Coimbatore', 'Visakhapatnam', 'Mysore', 'Mangalore',
-    'Gurgaon', 'Noida', 'Navi Mumbai', 'Goa', 'Patna',
-    'Bhubaneswar', 'Dehradun', 'Ranchi', 'Guwahati', 'Thiruvananthapuram'
+
+    // ===== KARNATAKA — Major Cities =====
+    'Bangalore', 'Bengaluru', 'Mysore', 'Mysuru', 'Mangalore', 'Mangaluru',
+    'Hubli', 'Dharwad', 'Belgaum', 'Belagavi',
+    'Gulbarga', 'Kalaburagi', 'Shimoga', 'Shivamogga',
+    'Davangere', 'Bellary', 'Ballari',
+    'Udupi', 'Hassan', 'Tumkur', 'Tumakuru',
+    'Chitradurga', 'Mandya', 'Raichur', 'Bidar', 'Bagalkot',
+    'Chikmagalur', 'Gadag',
+
+    // ===== TAMIL NADU — Major Cities =====
+    'Chennai', 'Coimbatore', 'Madurai', 'Tiruchirappalli', 'Trichy',
+    'Salem', 'Tirunelveli', 'Erode', 'Vellore', 'Thoothukudi', 'Tuticorin',
+    'Thanjavur', 'Dindigul', 'Hosur', 'Nagercoil',
+    'Tiruppur', 'Kanchipuram', 'Cuddalore', 'Kumbakonam',
+    'Pollachi', 'Ooty', 'Karur'
 ];
 
-// Remove duplicates (Thiruvananthapuram appears in both Kerala and India lists)
+// Remove duplicates
 const UNIQUE_LOCATIONS = [...new Set(LOCATIONS)];
 
-// District/State mapping for structured data
-const DISTRICT_MAP = {
-    // Kerala
+// ===== District/State Mapping =====
+
+// Kerala district mapping
+const KERALA_DISTRICT_MAP = {
     'Alappuzha': 'Alappuzha', 'Alleppey': 'Alappuzha',
     'Ernakulam': 'Ernakulam', 'Kochi': 'Ernakulam', 'Muvattupuzha': 'Ernakulam',
     'Chalakudy': 'Thrissur', 'Kodungallur': 'Thrissur',
@@ -66,51 +78,88 @@ const DISTRICT_MAP = {
     'Wayanad': 'Wayanad', 'Sultan Bathery': 'Wayanad', 'Kalpetta': 'Wayanad', 'Mananthavady': 'Wayanad'
 };
 
-// State mapping for cities outside Kerala
-const STATE_MAP = {
-    'Mumbai': 'Maharashtra', 'Navi Mumbai': 'Maharashtra', 'Pune': 'Maharashtra',
-    'Nagpur': 'Maharashtra',
-    'Delhi': 'Delhi', 'Gurgaon': 'Haryana', 'Noida': 'Uttar Pradesh',
-    'Bangalore': 'Karnataka', 'Mysore': 'Karnataka', 'Mangalore': 'Karnataka',
-    'Hyderabad': 'Telangana', 'Visakhapatnam': 'Andhra Pradesh',
-    'Chennai': 'Tamil Nadu', 'Coimbatore': 'Tamil Nadu',
-    'Kolkata': 'West Bengal',
-    'Ahmedabad': 'Gujarat', 'Surat': 'Gujarat', 'Vadodara': 'Gujarat',
-    'Jaipur': 'Rajasthan',
-    'Lucknow': 'Uttar Pradesh',
-    'Indore': 'Madhya Pradesh', 'Bhopal': 'Madhya Pradesh',
-    'Chandigarh': 'Chandigarh',
-    'Goa': 'Goa',
-    'Patna': 'Bihar',
-    'Bhubaneswar': 'Odisha',
-    'Dehradun': 'Uttarakhand',
-    'Ranchi': 'Jharkhand',
-    'Guwahati': 'Assam'
+// Karnataka city mapping
+const KARNATAKA_MAP = {
+    'Bangalore': 'Karnataka', 'Bengaluru': 'Karnataka',
+    'Mysore': 'Karnataka', 'Mysuru': 'Karnataka',
+    'Mangalore': 'Karnataka', 'Mangaluru': 'Karnataka',
+    'Hubli': 'Karnataka', 'Dharwad': 'Karnataka',
+    'Belgaum': 'Karnataka', 'Belagavi': 'Karnataka',
+    'Gulbarga': 'Karnataka', 'Kalaburagi': 'Karnataka',
+    'Shimoga': 'Karnataka', 'Shivamogga': 'Karnataka',
+    'Davangere': 'Karnataka', 'Bellary': 'Karnataka', 'Ballari': 'Karnataka',
+    'Udupi': 'Karnataka', 'Hassan': 'Karnataka',
+    'Tumkur': 'Karnataka', 'Tumakuru': 'Karnataka',
+    'Chitradurga': 'Karnataka', 'Mandya': 'Karnataka',
+    'Raichur': 'Karnataka', 'Bidar': 'Karnataka', 'Bagalkot': 'Karnataka',
+    'Chikmagalur': 'Karnataka', 'Gadag': 'Karnataka'
 };
 
-// Determine if a location is in Kerala
+// Tamil Nadu city mapping
+const TAMILNADU_MAP = {
+    'Chennai': 'Tamil Nadu', 'Coimbatore': 'Tamil Nadu',
+    'Madurai': 'Tamil Nadu', 'Tiruchirappalli': 'Tamil Nadu', 'Trichy': 'Tamil Nadu',
+    'Salem': 'Tamil Nadu', 'Tirunelveli': 'Tamil Nadu',
+    'Erode': 'Tamil Nadu', 'Vellore': 'Tamil Nadu',
+    'Thoothukudi': 'Tamil Nadu', 'Tuticorin': 'Tamil Nadu',
+    'Thanjavur': 'Tamil Nadu', 'Dindigul': 'Tamil Nadu',
+    'Hosur': 'Tamil Nadu', 'Nagercoil': 'Tamil Nadu',
+    'Tiruppur': 'Tamil Nadu', 'Kanchipuram': 'Tamil Nadu',
+    'Cuddalore': 'Tamil Nadu', 'Kumbakonam': 'Tamil Nadu',
+    'Pollachi': 'Tamil Nadu', 'Ooty': 'Tamil Nadu', 'Karur': 'Tamil Nadu'
+};
+
+// Combined state map
+const STATE_MAP = { ...KARNATAKA_MAP, ...TAMILNADU_MAP };
+
+// Helper functions
 function isKeralaLocation(location) {
-    return DISTRICT_MAP.hasOwnProperty(location);
+    return KERALA_DISTRICT_MAP.hasOwnProperty(location);
 }
 
-// Get the region name for a location
+function isKarnatakaLocation(location) {
+    return KARNATAKA_MAP.hasOwnProperty(location);
+}
+
+function isTamilNaduLocation(location) {
+    return TAMILNADU_MAP.hasOwnProperty(location);
+}
+
 function getRegion(location) {
-    if (isKeralaLocation(location)) {
-        return 'Kerala';
-    }
-    return STATE_MAP[location] || 'India';
+    if (isKeralaLocation(location)) return 'Kerala';
+    if (isKarnatakaLocation(location)) return 'Karnataka';
+    if (isTamilNaduLocation(location)) return 'Tamil Nadu';
+    return 'South India';
 }
 
-// Get district/area context
 function getAreaContext(location) {
     if (isKeralaLocation(location)) {
-        const district = DISTRICT_MAP[location];
+        const district = KERALA_DISTRICT_MAP[location];
         const isDistrict = location === district;
         return isDistrict ? `in ${location} district, Kerala` : `in ${location} (${district} district), Kerala`;
     }
-    const state = STATE_MAP[location] || 'India';
+    const state = STATE_MAP[location] || 'South India';
     return `in ${location}, ${state}`;
 }
+
+// Geo coordinates for schema (approximate, for major cities)
+const GEO_COORDS = {
+    'Kannur': { lat: '11.8745', lng: '75.3704' },
+    'Kochi': { lat: '9.9312', lng: '76.2673' },
+    'Thiruvananthapuram': { lat: '8.5241', lng: '76.9366' },
+    'Kozhikode': { lat: '11.2588', lng: '75.7804' },
+    'Bangalore': { lat: '12.9716', lng: '77.5946' },
+    'Bengaluru': { lat: '12.9716', lng: '77.5946' },
+    'Mysore': { lat: '12.2958', lng: '76.6394' },
+    'Mysuru': { lat: '12.2958', lng: '76.6394' },
+    'Mangalore': { lat: '12.9141', lng: '74.8560' },
+    'Mangaluru': { lat: '12.9141', lng: '74.8560' },
+    'Chennai': { lat: '13.0827', lng: '80.2707' },
+    'Coimbatore': { lat: '11.0168', lng: '76.9558' },
+    'Madurai': { lat: '9.9252', lng: '78.1198' },
+    'Hubli': { lat: '15.3647', lng: '75.1240' },
+    'Salem': { lat: '11.6643', lng: '78.1460' },
+};
 
 // Ensure output directory exists
 if (!fs.existsSync(OUTPUT_DIR)) {
@@ -135,8 +184,8 @@ function generateLocationContent(location) {
     const isKerala = isKeralaLocation(location);
     const regionPhrase = isKerala ? `${location} and all of Kerala` : `${location} and across ${region}`;
     const nearbyPhrase = isKerala
-        ? `across ${location} and the entire ${DISTRICT_MAP[location] || location} region`
-        : `in ${location}, ${region}, and across India`;
+        ? `across ${location} and the entire ${KERALA_DISTRICT_MAP[location] || location} region`
+        : `in ${location}, ${region}, and across South India`;
 
     return `
   <!-- ===== LOCATION-SPECIFIC CONTENT (SEO) ===== -->
@@ -144,45 +193,53 @@ function generateLocationContent(location) {
     <div class="container">
       <div class="location-content-grid">
         <div class="location-content-main">
-          <h2 class="location-content-heading">Hire a Top Flutter, Mobile App & Web Developer ${inContext}</h2>
-          <p>Looking for the <strong>best Flutter developer</strong>, <strong>mobile app developer</strong>, or <strong>web developer in ${location}</strong>? I'm Vaishnav Prabhakaran, a top-rated freelance developer based in Kannur, Kerala — available for projects ${nearbyPhrase}. Whether you're a startup, small business, or enterprise ${inContext}, I deliver high-quality app and web solutions tailored to your needs.</p>
+          <h2 class="location-content-heading">Hire a Top Flutter & Mobile App Developer Near Me ${inContext}</h2>
+          <p>Looking for the <strong>best Flutter developer near me</strong> or <strong>mobile app developer near me</strong> in <strong>${location}</strong>? I'm Vaishnav Prabhakaran, a top-rated freelance developer based in Kannur, Kerala — available for projects ${nearbyPhrase}. Whether you're a startup, small business, or enterprise ${inContext}, I deliver high-quality app and web solutions tailored to your needs.</p>
           <p>I specialize in building <strong>cross-platform mobile apps</strong> using Flutter & Dart (Android + iOS from a single codebase), <strong>modern websites & web applications</strong> using Next.js, React, and TypeScript, and <strong>AI-powered solutions</strong> that give your business a competitive edge. From concept to deployment on the Google Play Store and App Store — I handle the full development lifecycle.</p>
 
-          <h3 class="location-services-title">App & Web Development Services in ${location}</h3>
+          <h3 class="location-services-title">App & Web Development Services in ${location} — Flutter Developer Near Me</h3>
           <div class="location-services-list">
             <div class="location-service-item">
               <i class="fas fa-mobile-alt"></i>
               <div>
-                <strong>Flutter & Mobile App Development</strong>
-                <p>Custom Android & iOS apps built with Flutter for businesses in ${location}. Cross-platform, pixel-perfect, and production-ready. Published on Google Play Store & App Store.</p>
+                <strong>Flutter & Mobile App Development in ${location}</strong>
+                <p>Custom Android & iOS apps built with Flutter for businesses in ${location}. Cross-platform, pixel-perfect, and production-ready. Published on Google Play Store & App Store. If you're searching for a mobile app developer near me in ${location}, ${region} — I'm here to help.</p>
               </div>
             </div>
             <div class="location-service-item">
               <i class="fas fa-globe"></i>
               <div>
-                <strong>Website & Web App Development</strong>
-                <p>Modern, responsive websites and web applications built with Next.js, React, and TypeScript for clients in ${location}, ${region}.</p>
+                <strong>Website & Web App Development in ${location}</strong>
+                <p>Modern, responsive websites and web applications built with Next.js, React, and TypeScript for clients in ${location}, ${region}. SEO-optimized and fast-loading.</p>
               </div>
             </div>
             <div class="location-service-item">
               <i class="fas fa-robot"></i>
               <div>
-                <strong>AI-Powered Solutions</strong>
+                <strong>AI-Powered Solutions for ${location} Businesses</strong>
                 <p>Smart chatbots, AI integrations, and automation tools to help ${location}-based businesses work smarter and scale faster.</p>
               </div>
             </div>
             <div class="location-service-item">
               <i class="fas fa-paint-brush"></i>
               <div>
-                <strong>UI/UX Design</strong>
+                <strong>UI/UX Design & Prototyping</strong>
                 <p>Beautiful, user-focused interfaces designed in Figma — modern design systems and premium aesthetics for apps and websites.</p>
               </div>
             </div>
           </div>
+
+          <h3 class="location-services-title">Why Choose Me as Your App Developer in ${location}?</h3>
+          <ul class="location-why-list">
+            <li><i class="fas fa-check-circle"></i> <strong>10+ apps built</strong> — Published on Google Play Store with real users</li>
+            <li><i class="fas fa-check-circle"></i> <strong>100% client satisfaction</strong> — On-time delivery, clean code, ongoing support</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Cross-platform expertise</strong> — Single codebase for Android + iOS with Flutter</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Serving ${region}</strong> — Available for projects in ${location} and across ${region}, Kerala, Karnataka & Tamil Nadu</li>
+          </ul>
         </div>
         <div class="location-content-sidebar">
           <div class="location-faq glass-card">
-            <h3>FAQ — App Developer in ${location}</h3>
+            <h3>FAQ — Flutter Developer Near Me in ${location}</h3>
             <details>
               <summary>Do you work with clients in ${location} remotely?</summary>
               <p>Yes! I work with clients ${nearbyPhrase} remotely. I use modern collaboration tools to ensure seamless communication, regular updates, and on-time delivery regardless of location.</p>
@@ -199,9 +256,13 @@ function generateLocationContent(location) {
               <summary>How long does app development take?</summary>
               <p>A typical mobile app takes 4–12 weeks depending on complexity. Simple websites can be delivered in 1–3 weeks. I provide realistic timelines and stick to them.</p>
             </details>
+            <details>
+              <summary>Are you the best Flutter developer near me in ${location}?</summary>
+              <p>I'm a top-rated Flutter developer serving ${location}, ${region}. With 10+ published apps, expertise in Flutter, Dart, Next.js, and AI integration — I deliver premium mobile and web solutions. Check my portfolio and client reviews above.</p>
+            </details>
           </div>
           <div class="location-cta glass-card">
-            <h3>Ready to Start Your Project?</h3>
+            <h3>Ready to Start Your Project in ${location}?</h3>
             <p>Let's build your next app or website. Get in touch for a free project consultation.</p>
             <a href="#contact" class="btn btn-primary">
               <span>Get Free Quote</span>
@@ -217,68 +278,45 @@ function generateLocationContent(location) {
 // Generate location-specific structured data
 function generateLocationSchema(location, pageUrl) {
     const region = getRegion(location);
+    const coords = GEO_COORDS[location] || GEO_COORDS['Kannur'];
+
     return `
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
-      "name": "Vaishnav Prabhakaran - Top Flutter & App Developer in ${location}",
+      "name": "Vaishnav Prabhakaran - Top Flutter & Mobile App Developer in ${location}",
       "image": "${BASE_URL}/vaishnav.png",
       "url": "${pageUrl}",
       "telephone": "+918078461246",
-      "description": "Top-rated Flutter developer, mobile app developer & web developer serving ${location}, ${region}, India. Available for freelance & contract projects.",
+      "description": "Best Flutter developer near me in ${location}. Top-rated mobile app developer, Android & iOS developer, and web developer serving ${location}, ${region}. Hire the best app developer near me.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "${location}",
         "addressRegion": "${region}",
         "addressCountry": "IN"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "${coords.lat}",
+        "longitude": "${coords.lng}"
+      },
       "areaServed": [
-        {
-          "@type": "City",
-          "name": "${location}"
-        },
-        {
-          "@type": "State",
-          "name": "${region}"
-        },
-        {
-          "@type": "Country",
-          "name": "India"
-        }
+        { "@type": "City", "name": "${location}" },
+        { "@type": "State", "name": "${region}" },
+        { "@type": "State", "name": "Kerala" },
+        { "@type": "State", "name": "Karnataka" },
+        { "@type": "State", "name": "Tamil Nadu" }
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "App & Web Development Services",
+        "name": "App & Web Development Services in ${location}",
         "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Flutter & Mobile App Development in ${location}"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Android & iOS App Development in ${location}"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Website & Web App Development in ${location}"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "AI Integration & Automation in ${location}"
-            }
-          }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Flutter App Development in ${location}" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile App Developer Near Me in ${location}" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Android & iOS App Development in ${location}" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website & Web App Development in ${location}" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Integration & Automation in ${location}" } }
         ]
       },
       "priceRange": "$$",
@@ -287,7 +325,54 @@ function generateLocationSchema(location, pageUrl) {
         "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
         "opens": "09:00",
         "closes": "18:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "ratingCount": "12"
       }
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is the best Flutter developer near me in ${location}?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vaishnav Prabhakaran is a top-rated Flutter developer serving ${location}, ${region}. With 10+ published apps, expertise in Flutter, Dart, Next.js, and AI integration, he delivers premium mobile and web solutions for businesses in ${location}."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost to hire a mobile app developer in ${location}?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Flutter app development costs in ${location} vary by complexity. Simple apps start from ₹25,000, while complex apps with backend and AI features range from ₹50,000 to ₹2,00,000+. Contact Vaishnav Prabhakaran for a free consultation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you build both Android and iOS apps in ${location}?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Flutter builds beautiful, high-performance apps for both Android and iOS from a single codebase — faster development, lower cost, and consistent UX for businesses in ${location}."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does app development take in ${location}?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A typical Flutter mobile app takes 4-12 weeks depending on complexity. Simple websites can be delivered in 1-3 weeks. Realistic timelines provided upfront for ${location} clients."
+          }
+        }
+      ]
     }
   </script>`;
 }
@@ -306,7 +391,7 @@ sitemapUrls.push(`
   </url>`);
 
 // Generate Pages
-console.log('🚀 Starting page generation...');
+console.log('🚀 Starting page generation for Kerala, Karnataka & Tamil Nadu...');
 
 let pageCount = 0;
 
@@ -321,16 +406,16 @@ UNIQUE_LOCATIONS.forEach(location => {
     // Customize Content
     let pageContent = template;
 
-    // 1. Update Title — action-oriented for CTR
-    const title = `Hire Best Flutter & App Developer in ${location}, ${region} | Vaishnav Prabhakaran`;
+    // 1. Update Title — heavy "near me" + action-oriented for CTR
+    const title = `Best Flutter & Mobile App Developer Near Me in ${location}, ${region} | Vaishnav Prabhakaran`;
     pageContent = pageContent.replace(/<title>.*<\/title>/, `<title>${title}</title>`);
 
-    // 2. Update Meta Description — compelling, CTA-driven
-    const description = `Looking for the best Flutter developer or mobile app developer in ${location}? Hire Vaishnav Prabhakaran \u2014 top-rated freelance Flutter, Android, iOS & web developer in ${location}, ${region}. 10+ apps built. Get a free quote today!`;
+    // 2. Update Meta Description — compelling, "near me" CTA-driven
+    const description = `Looking for the best Flutter developer near me in ${location}? Hire Vaishnav Prabhakaran \u2014 #1 freelance Flutter, Android, iOS & mobile app developer in ${location}, ${region}. 10+ apps built. Get a free quote today!`;
     pageContent = pageContent.replace(/<meta name="description"\s*\n?\s*content=".*?" \/>/, `<meta name="description"\n    content="${description}" />`);
 
-    // 3. Update Keywords — India-wide + location-specific
-    const specificKeywords = `Flutter Developer ${location}, Mobile App Developer ${location}, Web Developer ${location}, App Developer ${location}, Android Developer ${location}, iOS Developer ${location}, hire Flutter developer ${location}, hire app developer ${location}, hire web developer ${location}, best app developer ${location}, ${location} app development, ${location} website development, app developer near me, mobile developer near me, web developer near me, Flutter Developer India, Mobile App Developer India, freelance app developer ${location}, ${location} ${region}`;
+    // 3. Update Keywords — heavy "near me" + location-specific
+    const specificKeywords = `flutter developer near me, mobile app developer near me, app developer near me, best flutter developer near me, Flutter Developer ${location}, Mobile App Developer ${location}, Web Developer ${location}, App Developer ${location}, Android Developer ${location}, iOS Developer ${location}, hire Flutter developer ${location}, hire app developer ${location}, best app developer ${location}, ${location} app development, ${location} website development, flutter developer near me ${location}, mobile app developer near me ${location}, app developer near me ${location}, web developer near me, Flutter Developer ${region}, Mobile App Developer ${region}, freelance app developer ${location}, Vaishnav Prabhakaran`;
     pageContent = pageContent.replace(/<meta name="keywords"\s*\n?\s*content=".*?" \/>/, `<meta name="keywords"\n    content="${specificKeywords}" />`);
 
     // 4. Update Canonical Link — self-referencing
@@ -358,8 +443,8 @@ UNIQUE_LOCATIONS.forEach(location => {
     <div class="location-seo-inner">
       <i class="fas fa-map-marker-alt"></i>
       <div>
-        <h2 class="location-seo-title">Top Flutter, Mobile App &amp; Web Developer in <span>${location}, ${region}</span></h2>
-        <p class="location-seo-desc">Hire the best Flutter developer or app developer in ${location}. Vaishnav Prabhakaran delivers expert Android &amp; iOS app development, modern website development, and AI-powered solutions to businesses and startups in ${location} and across India.</p>
+        <h2 class="location-seo-title">Best Flutter & Mobile App Developer Near Me in <span>${location}, ${region}</span></h2>
+        <p class="location-seo-desc">Searching for a Flutter developer near me or mobile app developer near me in ${location}? Vaishnav Prabhakaran delivers expert Android &amp; iOS app development, modern website development, and AI-powered solutions to businesses and startups in ${location}, ${region}.</p>
       </div>
     </div>
   </div>`;
@@ -380,7 +465,7 @@ UNIQUE_LOCATIONS.forEach(location => {
 
     // Write File
     fs.writeFileSync(filePath, pageContent);
-    console.log(`✅ Generated: ${fileName}`);
+    console.log(`✅ Generated: ${fileName} (${region})`);
 
     // Add to sitemap
     sitemapUrls.push(`
@@ -401,5 +486,9 @@ const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 
 fs.writeFileSync(SITEMAP_PATH, sitemapContent);
 
-console.log(`\n🎉 Success! Generated ${pageCount} location pages and rebuilt sitemap.xml cleanly.`);
-console.log(`📊 Sitemap now has ${sitemapUrls.length} unique URLs (1 homepage + ${pageCount} location pages).`);
+console.log(`\n🎉 Success! Generated ${pageCount} location pages for Kerala, Karnataka & Tamil Nadu.`);
+console.log(`📊 Sitemap rebuilt with ${sitemapUrls.length} unique URLs (1 homepage + ${pageCount} location pages).`);
+console.log(`\n📍 Breakdown:`);
+console.log(`   Kerala: ${UNIQUE_LOCATIONS.filter(l => isKeralaLocation(l)).length} pages`);
+console.log(`   Karnataka: ${UNIQUE_LOCATIONS.filter(l => isKarnatakaLocation(l)).length} pages`);
+console.log(`   Tamil Nadu: ${UNIQUE_LOCATIONS.filter(l => isTamilNaduLocation(l)).length} pages`);
