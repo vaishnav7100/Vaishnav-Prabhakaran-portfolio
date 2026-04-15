@@ -432,7 +432,20 @@ UNIQUE_LOCATIONS.forEach(location => {
     pageContent = pageContent.replace(/<meta property="twitter:description"\s*\n?\s*content=".*?" \/>/, `<meta property="twitter:description"\n    content="${description}" />`);
     pageContent = pageContent.replace(/<meta property="twitter:url" content=".*?" \/>/, `<meta property="twitter:url" content="${pageUrl}" />`);
 
-    // 6. Add location-specific structured data BEFORE </head>
+    // 6. Remove generic ProfessionalService and FAQPage schemas from template (to avoid duplicates)
+    //    Then add location-specific structured data BEFORE </head>
+    function removeSchemaByType(html, schemaType) {
+        const pattern = /<script type="application\/ld\+json">[\s\S]*?<\/script>/g;
+        return html.replace(pattern, (match) => {
+            if (match.includes(`"@type": "${schemaType}"`) || match.includes(`"@type":"${schemaType}"`)) {
+                return '';
+            }
+            return match;
+        });
+    }
+    pageContent = removeSchemaByType(pageContent, 'ProfessionalService');
+    pageContent = removeSchemaByType(pageContent, 'FAQPage');
+
     const locationSchema = generateLocationSchema(location, pageUrl);
     pageContent = pageContent.replace('</head>', `${locationSchema}\n</head>`);
 
