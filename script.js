@@ -484,14 +484,31 @@ document.head.appendChild(dynamicStyles);
     document.getElementById('footerResumeBtn'),
   ];
 
+  let isIframeLoaded = false;
+
   function openResume(e) {
     e.preventDefault();
     e.stopPropagation();
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
-    // Show loading state
-    if (iframe) { iframe.classList.remove('loaded'); }
-    if (loading) { loading.classList.remove('hidden'); }
+    
+    if (iframe && !iframe.getAttribute('src')) {
+      // First time opening: show spinner, set src
+      if (loading) loading.classList.remove('hidden');
+      iframe.classList.remove('loaded');
+      iframe.setAttribute('src', iframe.getAttribute('data-src'));
+
+      // Fallback: forcefully show iframe after 2.5s
+      setTimeout(() => {
+        isIframeLoaded = true;
+        iframe.classList.add('loaded');
+        if (loading) loading.classList.add('hidden');
+      }, 2500);
+    } else if (isIframeLoaded) {
+      // Already loaded from a previous open
+      iframe.classList.add('loaded');
+      if (loading) loading.classList.add('hidden');
+    }
   }
 
   function closeResume() {
@@ -504,6 +521,7 @@ document.head.appendChild(dynamicStyles);
   // iframe load complete
   if (iframe) {
     iframe.addEventListener('load', () => {
+      isIframeLoaded = true;
       iframe.classList.add('loaded');
       if (loading) loading.classList.add('hidden');
     });
