@@ -409,6 +409,8 @@ if (closeModal && successModal) {
 // ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
+    // Skip resume modal triggers (they use href="#" but open modal)
+    if (this.id === 'navResumeBtn' || this.id === 'footerResumeBtn') return;
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -465,5 +467,60 @@ dynamicStyles.textContent = `
   @keyframes rippleEffect { to{transform:translate(-50%,-50%) scale(20);opacity:0} }
 `;
 document.head.appendChild(dynamicStyles);
+
+// ===== RESUME MODAL =====
+(function initResumeModal() {
+  const modal = document.getElementById('resumeModal');
+  const iframe = document.getElementById('resumeIframe');
+  const loading = document.getElementById('resumeLoading');
+  const closeBtn = document.getElementById('resumeCloseBtn');
+  if (!modal) return;
+
+  // All buttons that open the resume modal
+  const triggers = [
+    document.getElementById('navResumeBtn'),
+    document.getElementById('heroResumeBtn'),
+    document.getElementById('aboutResumeBtn'),
+    document.getElementById('footerResumeBtn'),
+  ];
+
+  function openResume(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    // Show loading state
+    if (iframe) { iframe.classList.remove('loaded'); }
+    if (loading) { loading.classList.remove('hidden'); }
+  }
+
+  function closeResume() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  triggers.forEach(btn => { if (btn) btn.addEventListener('click', openResume); });
+
+  // iframe load complete
+  if (iframe) {
+    iframe.addEventListener('load', () => {
+      iframe.classList.add('loaded');
+      if (loading) loading.classList.add('hidden');
+    });
+  }
+
+  // Close button
+  if (closeBtn) closeBtn.addEventListener('click', closeResume);
+
+  // Click outside modal box
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeResume();
+  });
+
+  // Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) closeResume();
+  });
+})();
 
 console.log('%c👋 Hey there! Built with passion by Vaishnav Prabhakaran', 'color: #A855F7; font-size: 14px; font-weight: bold; padding: 8px;');
