@@ -193,11 +193,11 @@ function generateLocationContent(location) {
     <div class="container">
       <div class="location-content-grid">
         <div class="location-content-main">
-          <h2 class="location-content-heading">Hire a Top Flutter & Mobile App Developer Near Me ${inContext}</h2>
-          <p>Looking for the <strong>best Flutter developer near me</strong> or <strong>mobile app developer near me</strong> in <strong>${location}</strong>? I'm Vaishnav Prabhakaran, a top-rated freelance developer based in Kannur, Kerala — available for projects ${nearbyPhrase}. Whether you're a startup, small business, or enterprise ${inContext}, I deliver high-quality app and web solutions tailored to your needs.</p>
+          <h2 class="location-content-heading">Flutter &amp; Mobile App Developer ${inContext}</h2>
+          <p>Looking for a <strong>Flutter developer</strong> or <strong>mobile app developer</strong> in <strong>${location}</strong>? I'm Vaishnav Prabhakaran, a freelance developer based in Kannur, Kerala — available for projects ${nearbyPhrase}. Whether you're a startup, small business, or enterprise ${inContext}, I build high-quality app and web solutions tailored to your requirements.</p>
           <p>I specialize in building <strong>cross-platform mobile apps</strong> using Flutter & Dart (Android + iOS from a single codebase), <strong>modern websites & web applications</strong> using Next.js, React, and TypeScript, and <strong>AI-powered solutions</strong> that give your business a competitive edge. From concept to deployment on the Google Play Store and App Store — I handle the full development lifecycle.</p>
 
-          <h3 class="location-services-title">App & Web Development Services in ${location} — Flutter Developer Near Me</h3>
+          <h3 class="location-services-title">App &amp; Web Development Services in ${location}</h3>
           <div class="location-services-list">
             <div class="location-service-item">
               <i class="fas fa-mobile-alt"></i>
@@ -229,7 +229,7 @@ function generateLocationContent(location) {
             </div>
           </div>
 
-          <h3 class="location-services-title">Why Choose Me as Your App Developer in ${location}?</h3>
+          <h3 class="location-services-title">Why Work With Me as Your App Developer in ${location}?</h3>
           <ul class="location-why-list">
             <li><i class="fas fa-check-circle"></i> <strong>10+ apps built</strong> — Published on Google Play Store with real users</li>
             <li><i class="fas fa-check-circle"></i> <strong>100% client satisfaction</strong> — On-time delivery, clean code, ongoing support</li>
@@ -285,11 +285,11 @@ function generateLocationSchema(location, pageUrl) {
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
-      "name": "Vaishnav Prabhakaran - Top Flutter & Mobile App Developer in ${location}",
-      "image": "${BASE_URL}/vaishnav.png",
+      "name": "Vaishnav Prabhakaran — Flutter & Mobile App Developer in ${location}",
+      "image": "${BASE_URL}/vaishnav.jpg",
       "url": "${pageUrl}",
       "telephone": "+918078461246",
-      "description": "Best Flutter developer near me in ${location}. Top-rated mobile app developer, Android & iOS developer, and web developer serving ${location}, ${region}. Hire the best app developer near me.",
+      "description": "Freelance Flutter developer and mobile app developer serving ${location}, ${region}. Building Android & iOS apps, web applications, and AI-powered solutions.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "${location}",
@@ -342,10 +342,10 @@ function generateLocationSchema(location, pageUrl) {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Who is the best Flutter developer near me in ${location}?",
+          "name": "How do I hire a Flutter developer in ${location}?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Vaishnav Prabhakaran is a top-rated Flutter developer serving ${location}, ${region}. With 10+ published apps, expertise in Flutter, Dart, Next.js, and AI integration, he delivers premium mobile and web solutions for businesses in ${location}."
+            "text": "Vaishnav Prabhakaran is a freelance Flutter developer serving ${location}, ${region}. With 10+ published apps, expertise in Flutter, Dart, Next.js, and AI integration, he builds mobile and web solutions for businesses in ${location}. Reach out via the contact form or WhatsApp."
           }
         },
         {
@@ -407,11 +407,11 @@ UNIQUE_LOCATIONS.forEach(location => {
     let pageContent = template;
 
     // 1. Update Title — heavy "near me" + action-oriented for CTR
-    const title = `Best Flutter & Mobile App Developer Near Me in ${location}, ${region} | Vaishnav Prabhakaran`;
+    const title = `Flutter & Mobile App Developer in ${location}, ${region} | Vaishnav Prabhakaran`;
     pageContent = pageContent.replace(/<title>.*<\/title>/, `<title>${title}</title>`);
 
     // 2. Update Meta Description — compelling, "near me" CTA-driven
-    const description = `Looking for the best Flutter developer near me in ${location}? Hire Vaishnav Prabhakaran \u2014 #1 freelance Flutter, Android, iOS & mobile app developer in ${location}, ${region}. 10+ apps built. Get a free quote today!`;
+    const description = `Flutter and mobile app developer in ${location}. I'm Vaishnav Prabhakaran \u2014 a freelance Flutter, Android, iOS & web developer based in Kerala, available for projects in ${location}, ${region}. 10+ apps built. Get in touch!`;
     pageContent = pageContent.replace(/<meta name="description"\s*\n?\s*content=".*?" \/>/, `<meta name="description"\n    content="${description}" />`);
 
     // 3. Update Keywords — heavy "near me" + location-specific
