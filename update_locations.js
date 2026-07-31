@@ -77,8 +77,9 @@ files.forEach(file => {
   const jsonLdBlock = oldJsonLds.join('\n\n  ');
   newHtml = newHtml.slice(0, headEndIndex) + jsonLdBlock + '\n' + newHtml.slice(headEndIndex);
   
-  newHtml = newHtml.replace(/href="favicon\.svg\?v=2"/g, 'href="../favicon.svg?v=2"');
-  newHtml = newHtml.replace(/href="favicon\.png\?v=2"/g, 'href="../favicon.png?v=2"');
+  newHtml = newHtml.replace(/href="favicon\.svg\?v=3"/g, 'href="../favicon.svg?v=3"');
+  newHtml = newHtml.replace(/href="favicon\.png\?v=3"/g, 'href="../favicon.png?v=3"');
+  newHtml = newHtml.replace(/href="apple-touch-icon\.png\?v=3"/g, 'href="../apple-touch-icon.png?v=3"');
   newHtml = newHtml.replace(/href="styles\.css"/g, 'href="../styles.css"');
   newHtml = newHtml.replace(/src="script\.js"/g, 'src="../script.js"');
   newHtml = newHtml.replace(/href="vaishnav\.jpg"/g, 'href="../vaishnav.jpg"');

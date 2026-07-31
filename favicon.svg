@@ -1,6 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="128" fill="#111110"/>
-  <path d="M 80 160 H 150 L 205 315 L 260 160 H 330 L 240 360 H 170 Z" fill="#FFFFFF"/>
-  <path d="M 310 160 H 420 C 460 160 480 185 480 225 C 480 265 460 290 420 290 H 370 V 360 H 310 Z M 370 210 V 240 H 410 C 425 240 430 235 430 225 C 430 215 425 210 410 210 Z" fill="#FFFFFF"/>
-  <circle cx="430" cy="335" r="25" fill="#4F46E5"/>
+  <style>
+    .bg { fill: none; }
+    .text-path { fill: #0F172A; }
+    .dot { fill: #4F46E5; }
+    @media (prefers-color-scheme: dark) {
+      .text-path { fill: #F8FAFC; }
+      .dot { fill: #84CC16; }
+    }
+  </style>
+  <rect class="bg" width="512" height="512" />
+  <path class="text-path" d="M 80 160 H 150 L 205 315 L 260 160 H 330 L 240 360 H 170 Z" />
+  <path class="text-path" d="M 310 160 H 420 C 460 160 480 185 480 225 C 480 265 460 290 420 290 H 370 V 360 H 310 Z M 370 210 V 240 H 410 C 425 240 430 235 430 225 C 430 215 425 210 410 210 Z" />
+  <circle class="dot" cx="430" cy="335" r="25" />
 </svg>

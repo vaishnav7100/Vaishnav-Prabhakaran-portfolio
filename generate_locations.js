@@ -421,7 +421,9 @@ UNIQUE_LOCATIONS.forEach(location => {
     // 4. Update Canonical Link — self-referencing
     pageContent = pageContent.replace(/<link rel="canonical" href=".*?" \/>/, `<link rel="canonical" href="${pageUrl}" />`);
     // Add favicon path for locations subdirectory
-    pageContent = pageContent.replace(/<link rel="icon" type="image\/svg\+xml" href="favicon\.svg">/, `<link rel="icon" type="image/svg+xml" href="../favicon.svg">`);
+    pageContent = pageContent.replace(/href="favicon\.svg\?v=3"/g, 'href="../favicon.svg?v=3"');
+    pageContent = pageContent.replace(/href="favicon\.png\?v=3"/g, 'href="../favicon.png?v=3"');
+    pageContent = pageContent.replace(/href="apple-touch-icon\.png\?v=3"/g, 'href="../apple-touch-icon.png?v=3"');
 
     // 5. Update Open Graph & Twitter
     pageContent = pageContent.replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${title}" />`);
