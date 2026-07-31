@@ -456,8 +456,8 @@ UNIQUE_LOCATIONS.forEach(location => {
     <div class="location-seo-inner">
       <i class="fas fa-map-marker-alt"></i>
       <div>
-        <h2 class="location-seo-title">Best Flutter & Mobile App Developer Near Me in <span>${location}, ${region}</span></h2>
-        <p class="location-seo-desc">Searching for a Flutter developer near me or mobile app developer near me in ${location}? Vaishnav Prabhakaran delivers expert Android &amp; iOS app development, modern website development, and AI-powered solutions to businesses and startups in ${location}, ${region}.</p>
+        <h2 class="location-seo-title">Flutter &amp; Mobile App Developer in <span>${location}, ${region}</span></h2>
+        <p class="location-seo-desc">Looking for a Flutter developer or mobile app developer in ${location}? Vaishnav Prabhakaran provides custom Android &amp; iOS app development, responsive website design, and AI-powered solutions to businesses and startups in ${location}, ${region}.</p>
       </div>
     </div>
   </div>`;
@@ -471,10 +471,10 @@ UNIQUE_LOCATIONS.forEach(location => {
     // 9. Fix Relative Paths (CSS/Images/JS)
     pageContent = pageContent.replace(/href="styles.css"/g, 'href="../styles.css"');
     pageContent = pageContent.replace(/src="script.js"/g, 'src="../script.js"');
-    pageContent = pageContent.replace(/src="vaishnav.png"/g, 'src="../vaishnav.png"');
+    pageContent = pageContent.replace(/src="vaishnav.jpg"/g, 'src="../vaishnav.jpg"');
     pageContent = pageContent.replace(/src="media__1771423611621.png"/g, 'src="../media__1771423611621.png"');
     // Fix preload path for locations
-    pageContent = pageContent.replace(/href="vaishnav.png"/g, 'href="../vaishnav.png"');
+    pageContent = pageContent.replace(/href="vaishnav.jpg"/g, 'href="../vaishnav.jpg"');
 
     // Write File
     fs.writeFileSync(filePath, pageContent);
