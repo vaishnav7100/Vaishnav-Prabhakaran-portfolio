@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8" />
@@ -385,14 +385,16 @@
     const root    = document.documentElement;
     const btn     = document.getElementById('themeToggle');
 
-    // On load: respect saved preference, else default dark
+    // On load: respect saved preference, else default light
     const saved = localStorage.getItem('theme');
     if (saved) {
       root.setAttribute('data-theme', saved);
+    } else {
+      root.setAttribute('data-theme', 'light');
     }
 
     btn.addEventListener('click', () => {
-      const current = root.getAttribute('data-theme') || 'dark';
+      const current = root.getAttribute('data-theme') || 'light';
       const next    = current === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);

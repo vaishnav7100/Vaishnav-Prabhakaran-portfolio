@@ -238,10 +238,9 @@
   /* ── THEME TOGGLE ─────────────────────────────────── */
   function initTheme() {
     const toggleBtn = qs('#themeToggle');
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const storedTheme = localStorage.getItem('theme');
 
-    const initialTheme = storedTheme || (prefersDark ? 'dark' : 'light');
+    const initialTheme = storedTheme || 'light';
     setTheme(initialTheme);
 
     if (toggleBtn) {
