@@ -464,11 +464,14 @@ UNIQUE_LOCATIONS.forEach(location => {
     </div>
   </div>`;
 
-    pageContent = pageContent.replace(/<body>/, `<body>\n${locationBanner}`);
-
-    // 8. Inject location-specific content section BEFORE the footer
+    // 7. Inject location-specific visible banner and content section BEFORE the footer
     const locationContent = generateLocationContent(location);
-    pageContent = pageContent.replace(/<footer class="footer">/, `${locationContent}\n\n  <footer class="footer">`);
+    const combinedSeo = `
+  ${locationBanner}
+  
+  ${locationContent}
+  `;
+    pageContent = pageContent.replace(/<footer class="footer">/, `${combinedSeo}\n\n  <footer class="footer">`);
 
     // 9. Fix Relative Paths (CSS/Images/JS)
     pageContent = pageContent.replace(/href="styles.css"/g, 'href="../styles.css"');
