@@ -648,6 +648,11 @@ body[data-theme="light"] .art-theme-btn .icon-moon { display: none; }
 @media(max-width:768px) {
   .art-nav-links, .art-nav-cta { display: none; }
   .art-hamburger { display: flex; }
+  
+  /* Disable heavy GPU blur on mobile to fix scrolling stutters */
+  .art-price-card, .art-ig-banner, .art-nav { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+  .art-price-card, .art-ig-banner { background: var(--card-bg) !important; }
+  .art-nav { background: var(--bg) !important; }
   .art-pricing-grid { grid-template-columns: 1fr; }
   .art-gift-grid { grid-template-columns: 1fr 1fr; }
   .art-timeline { flex-direction: column; align-items: center; gap: 12px; }

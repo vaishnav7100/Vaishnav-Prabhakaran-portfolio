@@ -108,23 +108,12 @@
     }, { passive: true });
   }
 
-  /* ── GALLERY CONTINUOUS SCROLL + DRAG + MOMENTUM ── */
+  /* ── GALLERY CONTINUOUS SCROLL + DRAG (LERP PHYSICS) ── */
   function initGallery() {
     const track = qs('.art-track');
     const scroller = qs('.art-scroller');
     if (!track || !scroller) return;
 
-    let offset = 0;
-    let rafId = null;
-    let baseSpeed = 0.8; 
-    let velocity = baseSpeed;
-    
-    let isDragging = false;
-    let startX = 0;
-    let lastX = 0;
-    let currentDragOffset = 0;
-    let lastTime = 0;
-    
     let cachedLoopWidth = 0;
     function updateLoopWidth() {
       if (track.children.length >= 16) {
@@ -133,81 +122,78 @@
         cachedLoopWidth = track.scrollWidth / 2;
       }
     }
-    
-    // Ensure accurate layout after images load
     updateLoopWidth();
     setTimeout(updateLoopWidth, 500);
     window.addEventListener('resize', updateLoopWidth, {passive: true});
 
+    // We use pure JS physics for both mobile and desktop.
+    // CSS `touch-action: pan-y` allows native vertical scrolling while we handle horizontal drag.
+    scroller.style.overflow = 'hidden';
+    
+    let targetOffset = 0;
+    let offset = 0;
+    let isDragging = false;
+    let startX = 0;
+    let dragStartOffset = 0;
+
     function tick() {
       const lw = cachedLoopWidth;
-      if (lw <= 0) {
-        rafId = requestAnimationFrame(tick);
-        return;
+      if (lw > 0) {
+        if (!isDragging) {
+          targetOffset += 0.8;
+        }
+        
+        // Smooth Lerp (Linear Interpolation)
+        offset += (targetOffset - offset) * 0.08;
+        
+        // Loop seamlessly in BOTH directions
+        if (offset >= lw) {
+          offset -= lw;
+          targetOffset -= lw;
+          dragStartOffset -= lw;
+        } else if (offset < 0) {
+          offset += lw;
+          targetOffset += lw;
+          dragStartOffset += lw;
+        }
+        
+        track.style.transform = `translate3d(-${offset.toFixed(2)}px, 0, 0)`;
       }
-      
-      if (!isDragging) {
-        // Friction: velocity slowly returns to baseSpeed
-        velocity += (baseSpeed - velocity) * 0.04;
-        offset += velocity;
-      }
-      
-      // Loop seamlessly
-      if (offset >= lw) offset -= lw;
-      if (offset < 0) offset += lw;
-      
-      track.style.transform = `translate3d(-${offset}px, 0, 0)`;
-      rafId = requestAnimationFrame(tick);
+      requestAnimationFrame(tick);
     }
-    
-    rafId = requestAnimationFrame(tick);
+    requestAnimationFrame(tick);
 
     function startDrag(x) {
       isDragging = true;
       startX = x;
-      lastX = x;
-      currentDragOffset = offset;
+      dragStartOffset = targetOffset;
       scroller.style.cursor = 'grabbing';
-      velocity = 0;
-      lastTime = performance.now();
     }
     
     function moveDrag(x) {
       if (!isDragging) return;
-      
-      const now = performance.now();
-      const dt = Math.max(1, now - lastTime);
-      lastTime = now;
-      
-      const multiplier = window.innerWidth <= 768 ? 2.2 : 1.2;
-      const deltaX = (startX - x) * multiplier;
-      offset = currentDragOffset + deltaX;
-      
-      // Calculate velocity for momentum (pixels per frame approx)
-      const moveDelta = (lastX - x) * multiplier;
-      velocity = (moveDelta / dt) * 16; // Normalize to 60fps
-      lastX = x;
+      const multiplier = window.innerWidth <= 768 ? 2.0 : 1.5;
+      const delta = (startX - x) * multiplier;
+      targetOffset = dragStartOffset + delta;
     }
     
     function endDrag() {
-      if (!isDragging) return;
       isDragging = false;
       scroller.style.cursor = 'grab';
-      
-      // Cap max momentum to prevent crazy spinning
-      if (velocity > 45) velocity = 45;
-      if (velocity < -45) velocity = -45;
     }
 
-    // Desktop Mouse Events
-    scroller.addEventListener('mousedown', (e) => startDrag(e.pageX));
-    window.addEventListener('mousemove', (e) => { if (isDragging) moveDrag(e.pageX); });
+    // Mouse
+    scroller.addEventListener('mousedown', (e) => {
+      e.preventDefault(); // Prevent native image ghost-dragging
+      startDrag(e.pageX);
+    });
+    window.addEventListener('mousemove', (e) => moveDrag(e.pageX));
     window.addEventListener('mouseup', endDrag);
-    scroller.addEventListener('mouseleave', endDrag); // if mouse leaves scroller while not dragging, no-op; if dragging, ends drag safely
-
-    // Mobile Touch Events
+    scroller.addEventListener('mouseleave', endDrag);
+    
+    // Touch
     scroller.addEventListener('touchstart', (e) => startDrag(e.touches[0].pageX), {passive: true});
-    window.addEventListener('touchmove', (e) => { if (isDragging) moveDrag(e.touches[0].pageX); }, {passive: true});
+    window.addEventListener('touchmove', (e) => moveDrag(e.touches[0].pageX), {passive: true});
     window.addEventListener('touchend', endDrag);
     window.addEventListener('touchcancel', endDrag);
   }
