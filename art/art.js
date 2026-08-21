@@ -149,35 +149,54 @@
     
     rafId = requestAnimationFrame(tick);
 
-    function startDrag(x) {
+    let startY = 0;
+    let isVerticalScroll = false;
+
+    function startDrag(x, y) {
       isDragging = true;
+      isVerticalScroll = false;
       startX = x;
+      startY = y;
       lastX = x;
       currentDragOffset = offset;
       scroller.style.cursor = 'grabbing';
       velocity = 0;
     }
     
-    function moveDrag(x) {
+    function moveDrag(x, y) {
       if (!isDragging) return;
-      const delta = startX - x; 
+      if (isVerticalScroll) return;
+      
+      const deltaX = Math.abs(x - startX);
+      const deltaY = Math.abs(y - startY);
+      
+      // If user is scrolling vertically on mobile, ignore the horizontal drag
+      if (deltaY > deltaX && deltaY > 5) {
+        isDragging = false;
+        isVerticalScroll = true;
+        return;
+      }
+      
+      const multiplier = window.innerWidth <= 768 ? 2.2 : 1.2;
+      const delta = (startX - x) * multiplier; 
       offset = currentDragOffset + delta;
       
-      velocity = lastX - x; 
+      velocity = (lastX - x) * multiplier; 
       lastX = x;
     }
     
     function endDrag() {
       isDragging = false;
+      isVerticalScroll = false;
       scroller.style.cursor = 'grab';
     }
 
-    scroller.addEventListener('mousedown', (e) => startDrag(e.pageX));
-    window.addEventListener('mousemove', (e) => { if (isDragging) moveDrag(e.pageX); });
+    scroller.addEventListener('mousedown', (e) => startDrag(e.pageX, e.pageY));
+    window.addEventListener('mousemove', (e) => { if (isDragging) moveDrag(e.pageX, e.pageY); });
     window.addEventListener('mouseup', () => { if (isDragging) endDrag(); });
 
-    scroller.addEventListener('touchstart', (e) => startDrag(e.touches[0].pageX), {passive: true});
-    window.addEventListener('touchmove', (e) => { if (isDragging) moveDrag(e.touches[0].pageX); }, {passive: true});
+    scroller.addEventListener('touchstart', (e) => startDrag(e.touches[0].pageX, e.touches[0].pageY), {passive: true});
+    window.addEventListener('touchmove', (e) => { if (isDragging) moveDrag(e.touches[0].pageX, e.touches[0].pageY); }, {passive: true});
     window.addEventListener('touchend', () => { if (isDragging) endDrag(); });
   }
 
