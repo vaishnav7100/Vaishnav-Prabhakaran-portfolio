@@ -108,55 +108,101 @@
     }, { passive: true });
   }
 
-  /* ── GALLERY CONTINUOUS SCROLL (NATIVE iOS PHYSICS) ── */
+  /* ── GALLERY CONTINUOUS SCROLL + DRAG + MOMENTUM ── */
   function initGallery() {
+    const track = qs('.art-track');
     const scroller = qs('.art-scroller');
-    if (!scroller) return;
+    if (!track || !scroller) return;
 
+    let offset = 0;
     let rafId = null;
-    let isInteracting = false;
-    let exactScroll = 0;
+    let baseSpeed = 0.8; 
+    let velocity = baseSpeed;
+    
+    let isDragging = false;
+    let startX = 0;
+    let lastX = 0;
+    let currentDragOffset = 0;
+    let lastTime = 0;
     
     function getLoopWidth() {
-      return scroller.scrollWidth / 2;
+      if (track.children.length >= 16) {
+        return track.children[8].offsetLeft - track.children[0].offsetLeft;
+      }
+      return track.scrollWidth / 2;
     }
 
-    function autoScroll() {
-      if (!isInteracting) {
-        exactScroll += 0.8; // scroll speed
-        if (exactScroll >= 1) {
-          scroller.scrollLeft += Math.floor(exactScroll);
-          exactScroll -= Math.floor(exactScroll);
-        }
-        
-        // Loop back seamlessly when halfway
-        if (scroller.scrollLeft >= getLoopWidth()) {
-          scroller.scrollLeft = 0;
-        }
+    function tick() {
+      const lw = getLoopWidth();
+      if (lw <= 0) {
+        rafId = requestAnimationFrame(tick);
+        return;
       }
-      rafId = requestAnimationFrame(autoScroll);
+      
+      if (!isDragging) {
+        // Friction: velocity slowly returns to baseSpeed
+        velocity += (baseSpeed - velocity) * 0.04;
+        offset += velocity;
+      }
+      
+      // Loop seamlessly
+      if (offset >= lw) offset -= lw;
+      if (offset < 0) offset += lw;
+      
+      track.style.transform = `translate3d(-${offset}px, 0, 0)`;
+      rafId = requestAnimationFrame(tick);
     }
     
-    rafId = requestAnimationFrame(autoScroll);
+    rafId = requestAnimationFrame(tick);
 
-    let interactTimeout;
-    function pauseScroll() {
-      isInteracting = true;
-      clearTimeout(interactTimeout);
+    function startDrag(x) {
+      isDragging = true;
+      startX = x;
+      lastX = x;
+      currentDragOffset = offset;
+      scroller.style.cursor = 'grabbing';
+      velocity = 0;
+      lastTime = performance.now();
     }
-    function resumeScroll() {
-      clearTimeout(interactTimeout);
-      interactTimeout = setTimeout(() => {
-        isInteracting = false;
-        exactScroll = 0;
-      }, 1000); 
+    
+    function moveDrag(x) {
+      if (!isDragging) return;
+      
+      const now = performance.now();
+      const dt = Math.max(1, now - lastTime);
+      lastTime = now;
+      
+      const multiplier = window.innerWidth <= 768 ? 2.2 : 1.2;
+      const deltaX = (startX - x) * multiplier;
+      offset = currentDragOffset + deltaX;
+      
+      // Calculate velocity for momentum (pixels per frame approx)
+      const moveDelta = (lastX - x) * multiplier;
+      velocity = (moveDelta / dt) * 16; // Normalize to 60fps
+      lastX = x;
+    }
+    
+    function endDrag() {
+      if (!isDragging) return;
+      isDragging = false;
+      scroller.style.cursor = 'grab';
+      
+      // Cap max momentum to prevent crazy spinning
+      if (velocity > 45) velocity = 45;
+      if (velocity < -45) velocity = -45;
     }
 
-    scroller.addEventListener('touchstart', pauseScroll, {passive: true});
-    scroller.addEventListener('touchend', resumeScroll);
-    scroller.addEventListener('mousedown', pauseScroll);
-    scroller.addEventListener('mouseup', resumeScroll);
-    scroller.addEventListener('mouseleave', resumeScroll);
+    // Desktop Mouse Events
+    scroller.addEventListener('mousedown', (e) => startDrag(e.pageX));
+    window.addEventListener('mousemove', (e) => { if (isDragging) moveDrag(e.pageX); });
+    window.addEventListener('mouseup', endDrag);
+    scroller.addEventListener('mouseleave', endDrag); // if mouse leaves scroller while not dragging, no-op; if dragging, ends drag safely
+
+    // Mobile Touch Events
+    scroller.addEventListener('touchstart', (e) => startDrag(e.touches[0].pageX), {passive: true});
+    window.addEventListener('touchmove', (e) => { if (isDragging) moveDrag(e.touches[0].pageX); }, {passive: true});
+    window.addEventListener('touchend', endDrag);
+    window.addEventListener('touchcancel', endDrag);
   }
 
   /* ── PRICE CALCULATOR ──────────────────────────────── */

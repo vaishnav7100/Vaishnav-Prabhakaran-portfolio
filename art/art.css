@@ -311,12 +311,10 @@ body[data-theme="light"] .art-theme-btn .icon-moon { display: none; }
   mask-image: linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%);
 }
 .art-scroller {
-  overflow-x: auto; overflow-y: hidden; width: 100%;
-  cursor: grab;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  overflow: hidden; width: 100%;
+  cursor: grab; touch-action: pan-y;
+  -webkit-user-select: none; user-select: none;
 }
-.art-scroller::-webkit-scrollbar { display: none; }
 .art-scroller:active { cursor: grabbing; }
 .art-track {
   display: flex; gap: 24px; padding: 24px var(--pad);
