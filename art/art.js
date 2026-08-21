@@ -125,15 +125,22 @@
     let currentDragOffset = 0;
     let lastTime = 0;
     
-    function getLoopWidth() {
+    let cachedLoopWidth = 0;
+    function updateLoopWidth() {
       if (track.children.length >= 16) {
-        return track.children[8].offsetLeft - track.children[0].offsetLeft;
+        cachedLoopWidth = track.children[8].offsetLeft - track.children[0].offsetLeft;
+      } else {
+        cachedLoopWidth = track.scrollWidth / 2;
       }
-      return track.scrollWidth / 2;
     }
+    
+    // Ensure accurate layout after images load
+    updateLoopWidth();
+    setTimeout(updateLoopWidth, 500);
+    window.addEventListener('resize', updateLoopWidth, {passive: true});
 
     function tick() {
-      const lw = getLoopWidth();
+      const lw = cachedLoopWidth;
       if (lw <= 0) {
         rafId = requestAnimationFrame(tick);
         return;
