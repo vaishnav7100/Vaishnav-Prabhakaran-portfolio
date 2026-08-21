@@ -108,96 +108,55 @@
     }, { passive: true });
   }
 
-  /* ── GALLERY CONTINUOUS SCROLL + DRAG + MOMENTUM ───── */
+  /* ── GALLERY CONTINUOUS SCROLL (NATIVE iOS PHYSICS) ── */
   function initGallery() {
-    const track = qs('.art-track');
     const scroller = qs('.art-scroller');
-    if (!track || !scroller) return;
+    if (!scroller) return;
 
-    let offset = 0;
     let rafId = null;
-    let baseSpeed = 0.8; 
-    let velocity = baseSpeed;
-    let isDragging = false;
-    let startX = 0;
-    let lastX = 0;
-    let currentDragOffset = 0;
+    let isInteracting = false;
+    let exactScroll = 0;
     
     function getLoopWidth() {
-      if (track.children.length >= 16) {
-        return track.children[8].offsetLeft - track.children[0].offsetLeft;
-      }
-      return track.scrollWidth / 2;
+      return scroller.scrollWidth / 2;
     }
 
-    function tick() {
-      const lw = getLoopWidth();
-      
-      if (!isDragging) {
-        velocity += (baseSpeed - velocity) * 0.05; // friction back to base speed
-        offset += velocity;
+    function autoScroll() {
+      if (!isInteracting) {
+        exactScroll += 0.8; // scroll speed
+        if (exactScroll >= 1) {
+          scroller.scrollLeft += Math.floor(exactScroll);
+          exactScroll -= Math.floor(exactScroll);
+        }
+        
+        // Loop back seamlessly when halfway
+        if (scroller.scrollLeft >= getLoopWidth()) {
+          scroller.scrollLeft = 0;
+        }
       }
-      
-      if (lw > 0) {
-        if (offset >= lw) offset -= lw;
-        if (offset < 0) offset += lw;
-      }
-      
-      track.style.transform = `translateX(-${offset}px)`;
-      rafId = requestAnimationFrame(tick);
+      rafId = requestAnimationFrame(autoScroll);
     }
     
-    rafId = requestAnimationFrame(tick);
+    rafId = requestAnimationFrame(autoScroll);
 
-    let startY = 0;
-    let isVerticalScroll = false;
-
-    function startDrag(x, y) {
-      isDragging = true;
-      isVerticalScroll = false;
-      startX = x;
-      startY = y;
-      lastX = x;
-      currentDragOffset = offset;
-      scroller.style.cursor = 'grabbing';
-      velocity = 0;
+    let interactTimeout;
+    function pauseScroll() {
+      isInteracting = true;
+      clearTimeout(interactTimeout);
     }
-    
-    function moveDrag(x, y) {
-      if (!isDragging) return;
-      if (isVerticalScroll) return;
-      
-      const deltaX = Math.abs(x - startX);
-      const deltaY = Math.abs(y - startY);
-      
-      // If user is scrolling vertically on mobile, ignore the horizontal drag
-      if (deltaY > deltaX && deltaY > 5) {
-        isDragging = false;
-        isVerticalScroll = true;
-        return;
-      }
-      
-      const multiplier = window.innerWidth <= 768 ? 2.2 : 1.2;
-      const delta = (startX - x) * multiplier; 
-      offset = currentDragOffset + delta;
-      
-      velocity = (lastX - x) * multiplier; 
-      lastX = x;
-    }
-    
-    function endDrag() {
-      isDragging = false;
-      isVerticalScroll = false;
-      scroller.style.cursor = 'grab';
+    function resumeScroll() {
+      clearTimeout(interactTimeout);
+      interactTimeout = setTimeout(() => {
+        isInteracting = false;
+        exactScroll = 0;
+      }, 1000); 
     }
 
-    scroller.addEventListener('mousedown', (e) => startDrag(e.pageX, e.pageY));
-    window.addEventListener('mousemove', (e) => { if (isDragging) moveDrag(e.pageX, e.pageY); });
-    window.addEventListener('mouseup', () => { if (isDragging) endDrag(); });
-
-    scroller.addEventListener('touchstart', (e) => startDrag(e.touches[0].pageX, e.touches[0].pageY), {passive: true});
-    window.addEventListener('touchmove', (e) => { if (isDragging) moveDrag(e.touches[0].pageX, e.touches[0].pageY); }, {passive: true});
-    window.addEventListener('touchend', () => { if (isDragging) endDrag(); });
+    scroller.addEventListener('touchstart', pauseScroll, {passive: true});
+    scroller.addEventListener('touchend', resumeScroll);
+    scroller.addEventListener('mousedown', pauseScroll);
+    scroller.addEventListener('mouseup', resumeScroll);
+    scroller.addEventListener('mouseleave', resumeScroll);
   }
 
   /* ── PRICE CALCULATOR ──────────────────────────────── */
@@ -220,10 +179,10 @@
     const frameLblWrap= qs('#frameLabelWrap');
     if (!sliderEl) return;
 
-    let size  = 'a3';
+    let size  = 'a4';
     let faces = 2;
     let frame = false;
-    let curRaw = 2100;
+    let curRaw = 1600;
 
     const INR = n => '\u20B9' + n.toLocaleString('en-IN');
 

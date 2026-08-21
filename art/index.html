@@ -280,55 +280,58 @@
       </div>
       <div class="art-calc-wrap reveal-up" style="--delay:0.06s">
 
-        <!-- Size toggle -->
         <div class="art-calc-row">
           <label class="art-calc-label">Paper Size</label>
           <div class="art-size-toggle" id="sizeToggle">
             <button class="art-size-btn" id="sizeA5" data-size="a5">A5</button>
-            <button class="art-size-btn" id="sizeA4" data-size="a4">A4</button>
-            <button class="art-size-btn art-size-btn--active" id="sizeA3" data-size="a3">A3</button>
+            <button class="art-size-btn art-size-btn--active" id="sizeA4" data-size="a4">A4</button>
+            <button class="art-size-btn" id="sizeA3" data-size="a3">A3</button>
           </div>
         </div>
 
-        <!-- Face count slider -->
         <div class="art-calc-row">
-          <div class="art-calc-label-row">
-            <label class="art-calc-label">Number of Faces</label>
-            <span class="art-face-display" id="faceDisplay">2 Faces</span>
-          </div>
+          <label class="art-calc-label">Number of Faces</label>
           <div class="art-slider-wrap">
             <input type="range" min="1" max="6" value="2" class="art-slider" id="faceSlider" />
             <div class="art-slider-ticks">
               <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6+</span>
             </div>
+            <span class="art-face-display" id="faceDisplay">2 Faces</span>
           </div>
-          <p class="art-calc-note" id="faceNote">A3 size: no face limit.</p>
+          <p class="art-slider-note" id="faceNote">A4 size: maximum 2 faces.</p>
         </div>
 
-        <!-- Frame toggle -->
-        <div class="art-calc-row art-calc-row--inline" id="frameRow">
+        <div class="art-calc-row">
           <label class="art-calc-label">Add Frame?</label>
-          <label class="art-toggle-wrap" for="frameToggle" id="frameLabelWrap">
-            <input type="checkbox" id="frameToggle" />
-            <span class="art-toggle-track"><span class="art-toggle-thumb"></span></span>
-            <span class="art-toggle-hint" id="frameHint">+&#8377;500</span>
-          </label>
+          <div class="art-frame-toggle-wrap">
+            <div class="art-frame-info">
+              <strong>Premium Black Frame</strong>
+              <span class="art-frame-hint" id="frameHint">+&#8377;250</span>
+            </div>
+            <label class="art-switch">
+              <input type="checkbox" id="frameToggle">
+              <span class="art-slider-switch"></span>
+            </label>
+          </div>
         </div>
 
-        <!-- Result -->
-        <div class="art-calc-result">
-          <div class="art-calc-breakdown">
-            <div class="art-calc-line"><span id="bBaseLabel">Base price (A3, 2 faces)</span><span id="bBase">&#8377;2,100</span></div>
-            <div class="art-calc-line art-calc-line--frame" id="lineFrame" style="display:none"><span>Frame add-on</span><span id="bFrame">&#8377;500</span></div>
-            <div class="art-calc-line art-calc-line--courier"><span>Courier</span><span>Calculated at checkout</span></div>
+        <div class="art-calc-summary">
+          <div class="art-summary-row">
+            <span class="art-calc-label" id="bBaseLabel">Base price (A4, 2 faces)</span>
+            <strong id="bBase">&#8377;1,600</strong>
           </div>
-          <div class="art-calc-total-wrap">
-            <span class="art-calc-total-label">Your Estimated Total</span>
-            <span class="art-calc-total" id="calcTotal">&#8377;2,100</span>
+          <div class="art-summary-row" id="lineFrame" style="display:none;">
+            <span class="art-calc-label">Frame Addon</span>
+            <strong id="bFrame">+&#8377;0</strong>
+          </div>
+          <hr>
+          <div class="art-stat">
+            <span class="art-label">Estimated Total</span>
+            <span class="art-calc-total" id="calcTotal">&#8377;1,600</span>
           </div>
           <a href="https://wa.me/918078461246?text=Hi!%20I%20want%20to%20order%20a%20custom%20portrait." target="_blank" rel="noopener" class="art-calc-order-btn" id="calcOrderBtn">
             <i class="fab fa-whatsapp"></i>
-            Order This for <span id="calcBtnPrice">&#8377;2,100</span>
+            Order This for <span id="calcBtnPrice">&#8377;1,600</span>
           </a>
         </div>
       </div>
