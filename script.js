@@ -262,6 +262,60 @@
     }
   }
 
+  /* ── ART COMMISSIONS GALLERY ──────────────────────── */
+  function initCommissions() {
+    const track = qs('#scrollerTrack');
+    if (!track) return;
+
+    // The CSS keyframe animation handles the auto-scroll.
+    // We enhance it with a scroll-driven parallax offset.
+    let lastScrollY = window.scrollY;
+    let parallaxOffset = 0;
+    let targetOffset = 0;
+    let rafId = null;
+    const SPEED = 0.06;       // lerp factor — lower = smoother
+    const SCROLL_FACTOR = 0.4; // how much scroll translates to px shift
+
+    function tick() {
+      const scrollDelta = window.scrollY - lastScrollY;
+      lastScrollY = window.scrollY;
+      targetOffset += scrollDelta * SCROLL_FACTOR;
+      // Lerp toward target
+      parallaxOffset += (targetOffset - parallaxOffset) * SPEED;
+      // Clamp so it doesn't drift too far
+      targetOffset *= 0.92;
+      // Apply as an additional CSS variable for the parallax extra push
+      track.style.setProperty('--parallax', `${parallaxOffset.toFixed(2)}px`);
+      rafId = requestAnimationFrame(tick);
+    }
+
+    // Inject the CSS variable into the animation when it's in view
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          lastScrollY = window.scrollY;
+          if (!rafId) rafId = requestAnimationFrame(tick);
+        } else {
+          if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+        }
+      });
+    }, { threshold: 0.01 });
+
+    const wrap = qs('#commissionsGalleryWrap');
+    if (wrap) io.observe(wrap);
+
+    // Patch the animation to incorporate the parallax offset
+    // We do this by updating the animation via a dynamic style injection
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes portraitScroll {
+        from { transform: translateX(calc(0px + var(--parallax, 0px))); }
+        to   { transform: translateX(calc(-50% + var(--parallax, 0px))); }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
   /* ── INIT ──────────────────────────────────────────── */
   function init() {
     initTheme();
@@ -273,6 +327,7 @@
     initForm();
     initActiveNav();
     initScroll();
+    initCommissions();
   }
 
   document.readyState === 'loading'
