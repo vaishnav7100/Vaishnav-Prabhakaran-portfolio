@@ -13,6 +13,13 @@
     function applyTheme(t) {
       body.setAttribute('data-theme', t);
       localStorage.setItem(KEY, t);
+      
+      // Force synchronous repaint to fix iOS/WebKit bug where CSS vars don't update until scroll
+      const y = window.scrollY;
+      body.style.display = 'none';
+      body.offsetHeight; // force reflow
+      body.style.display = '';
+      window.scrollTo(0, y);
     }
     // Load saved or default dark
     const saved = localStorage.getItem(KEY) || DARK;
@@ -206,21 +213,21 @@
       if (size === 'a5') {
         // A5: 1 face only, Rs.600
         faces = 1;
-        sliderEl.value = 1; sliderEl.max = 1;
+        sliderEl.value = 1;
         sliderEl.disabled = true;
         base = 600;
         if (faceNote) faceNote.textContent = 'A5 size: 1 face only.';
         if (frameHint) frameHint.textContent = '+\u20B9150';
       } else if (size === 'a4') {
         faces = Math.min(faces, 2);
-        sliderEl.max = 2; sliderEl.disabled = false;
+        sliderEl.disabled = false;
         if (sliderEl.value > 2) sliderEl.value = 2;
         base = faces === 1 ? 1000 : 1600;
         if (faceNote) faceNote.textContent = 'A4 size: maximum 2 faces.';
         if (frameHint) frameHint.textContent = '+\u20B9250';
       } else {
         // A3
-        sliderEl.max = 6; sliderEl.disabled = false;
+        sliderEl.disabled = false;
         base = 900 + faces * 600;
         if (faceNote) faceNote.textContent = 'A3 size: no face limit.';
         if (frameHint) frameHint.textContent = '+\u20B9500';
@@ -284,7 +291,10 @@
 
     // Slider
     sliderEl.addEventListener('input', () => {
-      faces = parseInt(sliderEl.value);
+      let val = parseInt(sliderEl.value);
+      if (size === 'a5') { val = 1; sliderEl.value = 1; }
+      else if (size === 'a4' && val > 2) { val = 2; sliderEl.value = 2; }
+      faces = val;
       const lbl = faces >= 6 ? '6+ Faces' : faces + (faces === 1 ? ' Face' : ' Faces');
       if (faceDisp) faceDisp.textContent = lbl;
       calcPrice();
