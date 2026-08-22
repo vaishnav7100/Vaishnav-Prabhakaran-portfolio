@@ -32,6 +32,9 @@
 </head>
 <body data-theme="dark">
 
+  <!-- Scroll progress bar -->
+  <div class="art-scroll-progress" id="artScrollProgress"></div>
+
   <!-- Cursor glow (premium feel) -->
   <div class="art-cursor-glow" id="artCursorGlow"></div>
 
@@ -95,7 +98,7 @@
         <span class="art-underline">Portraits</span>
       </h1>
       <p class="art-hero-sub art-fade-in" style="--d:0.2s">
-        Hand-drawn portraits — the perfect <strong>birthday gift</strong>, anniversary surprise, or timeless keepsake. Every stroke, crafted by hand.
+        Hand-drawn portraits — the perfect <strong>birthday gift</strong>, <strong>anniversary surprise</strong>, or <strong>timeless keepsake</strong>. Every stroke, crafted by hand.
       </p>
       <div class="art-hero-actions art-fade-in" style="--d:0.26s">
         <a href="https://wa.me/918078461246?text=Hi!%20I%27m%20interested%20in%20a%20custom%20charcoal%20portrait." target="_blank" rel="noopener" class="art-btn-primary" id="heroOrderBtn">
@@ -105,17 +108,17 @@
       </div>
       <div class="art-hero-stats art-fade-in" style="--d:0.32s">
         <div class="art-stat">
-          <span class="art-stat-val">100<span class="art-stat-plus">+</span></span>
+          <span class="art-stat-val" data-count="100">100<span class="art-stat-plus">+</span></span>
           <span class="art-stat-lbl">Orders Done</span>
         </div>
         <div class="art-stat-div"></div>
         <div class="art-stat">
-          <span class="art-stat-val">&#8377;600</span>
+          <span class="art-stat-val" data-count="600" data-prefix="&#8377;">&#8377;600</span>
           <span class="art-stat-lbl">Starting Price</span>
         </div>
         <div class="art-stat-div"></div>
         <div class="art-stat">
-          <span class="art-stat-val">5&#9733;</span>
+          <span class="art-stat-val" data-count="5" data-suffix="&#9733;">5&#9733;</span>
           <span class="art-stat-lbl">Rated</span>
         </div>
         <div class="art-stat-div"></div>
@@ -183,13 +186,14 @@
     
     <!-- Premium Instagram Banner -->
     <div class="art-ig-banner reveal-up">
+      <div class="art-ig-sheen"></div>
       <div class="art-ig-icon"><i class="fab fa-instagram"></i></div>
       <div class="art-ig-text">
         <h4>Discover the Process</h4>
-        <p>Watch behind-the-scenes reels and time-lapses of my artworks</p>
+        <p>Explore more artworks, behind-the-scenes reels, and timelapses on my Instagram.</p>
       </div>
       <a href="https://www.instagram.com/_v_p_arts" target="_blank" rel="noopener" class="art-ig-btn">
-        Explore on Instagram
+        <i class="fab fa-instagram"></i> Follow on Instagram <i class="fas fa-arrow-right art-ig-arrow"></i>
       </a>
     </div>
 
@@ -303,17 +307,24 @@
 
         <div class="art-calc-row">
           <label class="art-calc-label">Add Frame?</label>
-          <div class="art-frame-toggle-wrap">
-            <div class="art-frame-info">
-              <strong>Premium Black Frame</strong>
-              <span class="art-frame-hint" id="frameHint">+&#8377;250</span>
+          <label class="art-frame-option" id="frameWrapLabel" for="frameToggle">
+            <input type="checkbox" id="frameToggle" style="position:absolute;opacity:0;width:0;height:0;">
+            <div class="art-frame-option-left">
+              <div class="art-frame-option-icon">
+                <i class="fas fa-image"></i>
+              </div>
+              <div class="art-frame-option-text">
+                <strong>Premium Black Frame</strong>
+                <span>Matte-finish frame, ready to hang</span>
+              </div>
             </div>
-            <label class="art-switch">
-              <input type="checkbox" id="frameToggle">
-              <span class="art-slider-switch"></span>
-            </label>
-          </div>
+            <div class="art-frame-option-right">
+              <span class="art-frame-hint" id="frameHint">+&#8377;250</span>
+              <div class="art-frame-check"><i class="fas fa-check"></i></div>
+            </div>
+          </label>
         </div>
+
 
         <div class="art-calc-summary">
           <div class="art-summary-row">
@@ -489,6 +500,12 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/918078461246?text=Hi!%20I%27m%20interested%20in%20a%20custom%20portrait%20commission." target="_blank" rel="noopener" class="art-float-wa" id="artFloatWA" aria-label="Order on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span>Order Now</span>
+  </a>
 
   <script src="art.js"></script>
 </body>
