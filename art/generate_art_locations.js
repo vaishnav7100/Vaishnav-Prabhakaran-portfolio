@@ -216,7 +216,7 @@ function generate(loc) {
   const desc = `Order a custom hand-drawn charcoal or pencil portrait from _V_P_ARTS. Online portrait commissions delivered worldwide to ${locationLabel}. Perfect birthday gift, anniversary gift, or memorial artwork. 100+ orders completed. Starting Rs.1,000. Worldwide shipping.`;
 
   const waMsg = `Hi! I'm from ${name} and interested in a custom portrait commission.`;
-  const waHireMsg = `Hi! I'm from ${name} and I want to hire you as an artist.`;
+  const waHireMsg = `Hi Vaishnav! I'm from ${name} and I want to hire you as a portrait artist for my studio / gifting orders.`;
 
   return `<!DOCTYPE html>
 <html lang="en" data-theme="dark">
@@ -337,7 +337,7 @@ function generate(loc) {
       <span class="art-ticker-item"><i class="fas fa-heart"></i> Anniversary Portraits</span>
       <span class="art-ticker-item"><i class="fas fa-truck"></i> Pan-India Shipping</span>
       <span class="art-ticker-item"><i class="fas fa-star"></i> 100+ Happy Customers</span>
-      <span class="art-ticker-item"><i class="fas fa-indian-rupee-sign"></i> Starting &#8377;600</span>
+      <span class="art-ticker-item"><i class="fas fa-indian-rupee-sign"></i> Starting &#8377;1,000</span>
       <span class="art-ticker-item"><i class="fas fa-shield-halved"></i> Your Privacy Protected</span>
       <!-- duplicate for seamless loop -->
       <span class="art-ticker-item"><i class="fas fa-pencil"></i> Hand-Drawn &amp; 100% Original</span>
@@ -346,7 +346,7 @@ function generate(loc) {
       <span class="art-ticker-item"><i class="fas fa-globe"></i> Worldwide Shipping</span>
       <span class="art-ticker-item"><i class="fas fa-star"></i> 100+ Happy Customers</span>
       <span class="art-ticker-item"><i class="fas fa-indian-rupee-sign"></i> Starting &#8377;1,000</span>
-      <span class="art-ticker-item"><i class="fas fa-palette"></i> Available for Hire Globally</span>
+      <span class="art-ticker-item"><i class="fas fa-palette"></i> Available for Studio Orders</span>
     </div>
   </div>
 
@@ -376,8 +376,8 @@ function generate(loc) {
         </div>
         <div class="art-gift-card">
           <div class="art-gift-icon"><i class="fas fa-palette"></i></div>
-          <h3>Hire Me as Artist</h3>
-          <p>Looking for an artist for events, live portrait sessions, exhibitions, or creative projects in ${name}? I'm available globally. Let's create together!</p>
+          <h3>Studio &amp; Gifting Orders</h3>
+          <p>Art studios, gifting businesses, and framing shops can hire me as a contract portrait artist for high-precision photo-to-sketch commissions.</p>
         </div>
       </div>
 
@@ -450,40 +450,6 @@ function generate(loc) {
         <strong>*Note:</strong> ${intl ? 'Prices in INR (Indian Rupees). International shipping charges extra. Contact via WhatsApp for international shipping quote to ' + name + '.' : 'Courier charges are extra. Additional custom elements cost extra.'}
       </div>
 
-      <!-- HIRE AS ARTIST SECTION -->
-      <div class="art-section-hd reveal-up" style="--delay:0.04s; margin-top:72px">
-        <span class="art-label">Hire as Artist</span>
-        <h2 class="art-heading">Looking to <em>Hire an Artist?</em></h2>
-        <p class="art-sub">I am available for hire as a professional artist for events, live portrait sessions, exhibitions, corporate events, and creative collaborations from ${locationLabel} or anywhere in the world.</p>
-      </div>
-      <div class="art-gift-grid reveal-up" style="--delay:0.06s">
-        <div class="art-gift-card">
-          <div class="art-gift-icon"><i class="fas fa-paint-brush"></i></div>
-          <h3>Live Portrait Events</h3>
-          <p>Hire me for live portrait drawing at weddings, corporate events, parties, and exhibitions in ${name} or worldwide.</p>
-        </div>
-        <div class="art-gift-card">
-          <div class="art-gift-icon"><i class="fas fa-palette"></i></div>
-          <h3>Custom Commissions</h3>
-          <p>Bespoke artwork projects, murals, large-format commissions, and creative collaborations for clients in ${name} and globally.</p>
-        </div>
-        <div class="art-gift-card">
-          <div class="art-gift-icon"><i class="fas fa-globe"></i></div>
-          <h3>International Projects</h3>
-          <p>Available for international art residencies, collaborative projects, and remote commissions from anywhere in the world.</p>
-        </div>
-        <div class="art-gift-card">
-          <div class="art-gift-icon"><i class="fas fa-handshake"></i></div>
-          <h3>Flexible Engagement</h3>
-          <p>Full-time event hire, part-time projects, or one-off commissions. Let's discuss your needs and create something extraordinary.</p>
-        </div>
-      </div>
-      <div style="text-align:center; margin-top:36px" class="reveal-up" style="--delay:0.08s">
-        <a href="https://wa.me/918078461246?text=${encodeURIComponent(waHireMsg)}" target="_blank" rel="noopener" class="art-btn-primary" style="display:inline-flex;">
-          <i class="fab fa-whatsapp"></i> Enquire About Hiring Me
-        </a>
-      </div>
-
       <!-- ═══ ABOUT ARTIST ═══ -->
       <section class="art-section" id="about">
         <div class="art-container">
@@ -495,7 +461,8 @@ function generate(loc) {
             <div class="art-about-text">
               <span class="art-label">The Artist Behind the Art</span>
               <h2 class="art-heading">Hi, I'm <em>Vaishnav</em></h2>
-              <p class="art-sub">I'm a passionate self-taught artist from Kannur, Kerala. Over the years, I've poured my heart into mastering realistic portraits using charcoal and graphite. Every single portrait I draw is crafted with immense attention to detail and love, ensuring it becomes a cherished memory for a lifetime.</p>
+              <p class="art-sub">I'm a passionate self-taught artist from Kannur, Kerala. Over the years, I've dedicated myself to mastering realistic portraits using the grid method with charcoal and graphite. Every single portrait I draw is crafted with immense precision and love, ensuring it becomes a cherished memory for a lifetime.</p>
+              <p class="art-sub" style="margin-top:12px; font-size:0.92rem; opacity:0.85;">Available for art studios, gifting agencies, and framing businesses seeking a dedicated portrait artist for photo-to-sketch commissions.</p>
               <div class="art-about-sig">_V_P_ARTS</div>
             </div>
           </div>
