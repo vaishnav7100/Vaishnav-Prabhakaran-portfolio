@@ -336,6 +336,8 @@ body[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
   display: none; /* shown at ≥ 640 */
 }
 .nav-hire-btn:hover { background: var(--accent); color: var(--white); transform: scale(1.03); box-shadow: 0 6px 20px var(--accent-glow); }
+body[data-theme="dark"] .nav-hire-btn:hover,
+body[data-theme="dark"] .btn-primary:hover { color: #07080A; }
 
 .nav-hamburger {
   display: flex;
