@@ -276,7 +276,7 @@
     let size  = 'a4';
     let faces = 2;
     let frame = false;
-    let curRaw = 1600;
+    let curRaw = 2200;
 
     const INR = n => '\u20B9' + n.toLocaleString('en-IN');
 
@@ -284,19 +284,19 @@
       let base = 0;
       if (size === 'a5') {
         faces = 1; sliderEl.value = 1; sliderEl.disabled = true;
-        base = 600;
+        base = 1000;
         if (faceNote) faceNote.textContent = 'A5 size: 1 face only.';
         if (frameHint) frameHint.textContent = '+\u20B9150';
       } else if (size === 'a4') {
         faces = Math.min(faces, 2); sliderEl.disabled = false;
         if (sliderEl.value > 2) sliderEl.value = 2;
-        base = faces === 1 ? 1000 : 1600;
+        base = faces === 1 ? 1400 : 2200;
         if (faceNote) faceNote.textContent = 'A4 size: maximum 2 faces.';
         if (frameHint) frameHint.textContent = '+\u20B9250';
       } else {
         faces = Math.min(faces, 6); sliderEl.max = 6; sliderEl.disabled = false;
         if (parseInt(sliderEl.value) > 6) sliderEl.value = 6;
-        base = 900 + faces * 600;
+        base = 2000 + (faces - 1) * 700;
         if (faceNote) faceNote.textContent = 'A3 size: maximum 6 faces.';
         if (frameHint) frameHint.textContent = '+\u20B9500';
       }

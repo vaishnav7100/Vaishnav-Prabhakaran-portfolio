@@ -104,7 +104,52 @@ const LOCATIONS = [
   { name:"Kumbakonam",   state:"Tamil Nadu",  slug:"kumbakonam",   lat:"10.9617", lng:"79.3788" },
   { name:"Pollachi",     state:"Tamil Nadu",  slug:"pollachi",     lat:"10.6597", lng:"77.0073" },
   { name:"Ooty",         state:"Tamil Nadu",  slug:"ooty",         lat:"11.4102", lng:"76.6950" },
-  { name:"Karur",        state:"Tamil Nadu",  slug:"karur",        lat:"10.9601", lng:"78.0766" }
+  { name:"Karur",        state:"Tamil Nadu",  slug:"karur",        lat:"10.9601", lng:"78.0766" },
+  // UAE
+  { name:"Dubai",        state:"Dubai",       slug:"dubai",        lat:"25.2048", lng:"55.2708", country:"UAE",         intl:true },
+  { name:"Abu Dhabi",    state:"Abu Dhabi",   slug:"abu-dhabi",    lat:"24.4539", lng:"54.3773", country:"UAE",         intl:true },
+  { name:"Sharjah",      state:"Sharjah",     slug:"sharjah",      lat:"25.3463", lng:"55.4209", country:"UAE",         intl:true },
+  { name:"Ajman",        state:"Ajman",       slug:"ajman",        lat:"25.4052", lng:"55.5136", country:"UAE",         intl:true },
+  // USA
+  { name:"New York",     state:"New York",    slug:"new-york",     lat:"40.7128", lng:"-74.0060", country:"USA",        intl:true },
+  { name:"Los Angeles",  state:"California",  slug:"los-angeles",  lat:"34.0522", lng:"-118.2437",country:"USA",        intl:true },
+  { name:"Chicago",      state:"Illinois",    slug:"chicago",      lat:"41.8781", lng:"-87.6298", country:"USA",        intl:true },
+  { name:"Houston",      state:"Texas",       slug:"houston",      lat:"29.7604", lng:"-95.3698", country:"USA",        intl:true },
+  { name:"San Francisco",state:"California",  slug:"san-francisco",lat:"37.7749", lng:"-122.4194",country:"USA",        intl:true },
+  { name:"Seattle",      state:"Washington",  slug:"seattle",      lat:"47.6062", lng:"-122.3321",country:"USA",        intl:true },
+  { name:"Boston",       state:"Massachusetts",slug:"boston",      lat:"42.3601", lng:"-71.0589", country:"USA",        intl:true },
+  { name:"Austin",       state:"Texas",       slug:"austin",       lat:"30.2672", lng:"-97.7431", country:"USA",        intl:true },
+  { name:"Dallas",       state:"Texas",       slug:"dallas",       lat:"32.7767", lng:"-96.7970", country:"USA",        intl:true },
+  { name:"Miami",        state:"Florida",     slug:"miami",        lat:"25.7617", lng:"-80.1918", country:"USA",        intl:true },
+  { name:"Atlanta",      state:"Georgia",     slug:"atlanta",      lat:"33.7490", lng:"-84.3880", country:"USA",        intl:true },
+  { name:"Washington DC",state:"DC",          slug:"washington-dc",lat:"38.9072", lng:"-77.0369", country:"USA",        intl:true },
+  { name:"New Jersey",   state:"New Jersey",  slug:"new-jersey",   lat:"40.0583", lng:"-74.4057", country:"USA",        intl:true },
+  // UK
+  { name:"London",       state:"England",     slug:"london",       lat:"51.5074", lng:"-0.1278",  country:"UK",         intl:true },
+  { name:"Birmingham",   state:"England",     slug:"birmingham",   lat:"52.4862", lng:"-1.8904",  country:"UK",         intl:true },
+  { name:"Manchester",   state:"England",     slug:"manchester",   lat:"53.4808", lng:"-2.2426",  country:"UK",         intl:true },
+  { name:"Leicester",    state:"England",     slug:"leicester",    lat:"52.6369", lng:"-1.1398",  country:"UK",         intl:true },
+  { name:"Bradford",     state:"England",     slug:"bradford",     lat:"53.7960", lng:"-1.7594",  country:"UK",         intl:true },
+  // Canada
+  { name:"Toronto",      state:"Ontario",     slug:"toronto",      lat:"43.6532", lng:"-79.3832", country:"Canada",     intl:true },
+  { name:"Vancouver",    state:"BC",          slug:"vancouver",    lat:"49.2827", lng:"-123.1207",country:"Canada",     intl:true },
+  { name:"Brampton",     state:"Ontario",     slug:"brampton",     lat:"43.7315", lng:"-79.7624", country:"Canada",     intl:true },
+  { name:"Mississauga",  state:"Ontario",     slug:"mississauga",  lat:"43.5890", lng:"-79.6441", country:"Canada",     intl:true },
+  { name:"Calgary",      state:"Alberta",     slug:"calgary",      lat:"51.0447", lng:"-114.0719",country:"Canada",     intl:true },
+  // Australia
+  { name:"Sydney",       state:"NSW",         slug:"sydney",       lat:"-33.8688",lng:"151.2093", country:"Australia",  intl:true },
+  { name:"Melbourne",    state:"Victoria",    slug:"melbourne",    lat:"-37.8136",lng:"144.9631", country:"Australia",  intl:true },
+  { name:"Brisbane",     state:"Queensland",  slug:"brisbane",     lat:"-27.4698",lng:"153.0251", country:"Australia",  intl:true },
+  { name:"Perth",        state:"WA",          slug:"perth",        lat:"-31.9505",lng:"115.8605", country:"Australia",  intl:true },
+  // Singapore
+  { name:"Singapore",    state:"Singapore",   slug:"singapore",    lat:"1.3521",  lng:"103.8198", country:"Singapore",  intl:true },
+  // Malaysia
+  { name:"Kuala Lumpur", state:"KL",          slug:"kuala-lumpur", lat:"3.1390",  lng:"101.6869", country:"Malaysia",   intl:true },
+  // Germany
+  { name:"Frankfurt",    state:"Hesse",       slug:"frankfurt",    lat:"50.1109", lng:"8.6821",   country:"Germany",    intl:true },
+  { name:"Berlin",       state:"Berlin",      slug:"berlin",       lat:"52.5200", lng:"13.4050",  country:"Germany",    intl:true },
+  // New Zealand
+  { name:"Auckland",     state:"Auckland",    slug:"auckland",     lat:"-36.8485",lng:"174.7633", country:"New Zealand",intl:true },
 ];
 
 const SEO_FOOTER = `
@@ -125,10 +170,29 @@ const SEO_FOOTER = `
           <a href="/art/locations/chennai.html">Portrait Artist Chennai</a> &middot;
           <a href="/art/locations/coimbatore.html">Custom Portrait Coimbatore</a> &middot;
           <a href="/art/locations/madurai.html">Pencil Sketch Madurai</a> &middot;
-          <a href="/art/locations/trichy.html">Charcoal Portrait Trichy</a>`;
+          <a href="/art/locations/trichy.html">Charcoal Portrait Trichy</a> &middot;
+          <!-- International -->
+          <a href="/art/locations/dubai.html">Portrait Artist Dubai</a> &middot;
+          <a href="/art/locations/abu-dhabi.html">Portrait Artist Abu Dhabi</a> &middot;
+          <a href="/art/locations/london.html">Portrait Artist London</a> &middot;
+          <a href="/art/locations/new-york.html">Portrait Artist New York</a> &middot;
+          <a href="/art/locations/los-angeles.html">Portrait Artist Los Angeles</a> &middot;
+          <a href="/art/locations/toronto.html">Portrait Artist Toronto</a> &middot;
+          <a href="/art/locations/sydney.html">Portrait Artist Sydney</a> &middot;
+          <a href="/art/locations/melbourne.html">Portrait Artist Melbourne</a> &middot;
+          <a href="/art/locations/singapore.html">Portrait Artist Singapore</a> &middot;
+          <a href="/art/locations/kuala-lumpur.html">Portrait Artist Kuala Lumpur</a> &middot;
+          <a href="/art/locations/chicago.html">Portrait Artist Chicago</a> &middot;
+          <a href="/art/locations/houston.html">Portrait Artist Houston</a> &middot;
+          <a href="/art/locations/san-francisco.html">Portrait Artist San Francisco</a> &middot;
+          <a href="/art/locations/vancouver.html">Portrait Artist Vancouver</a> &middot;
+          <a href="/art/locations/birmingham.html">Portrait Artist Birmingham UK</a>`;
 
 function generate(loc) {
   const { name, state, slug, lat, lng } = loc;
+  const intl = loc.intl === true;
+  const country = loc.country || "India";
+  const locationLabel = intl ? `${name}, ${country}` : `${name}, ${state}`;
   const url = `${BASE_URL}/art/locations/${slug}.html`;
   const keywords = [
     `portrait artist ${name}`, `charcoal portrait ${name}`, `pencil portrait ${name}`,
@@ -137,23 +201,32 @@ function generate(loc) {
     `birthday gift portrait ${name}`, `anniversary gift portrait ${name}`,
     `affordable portrait ${name}`, `best portrait artist ${name}`,
     `pencil drawing gift ${name}`, `charcoal sketch ${name}`,
-    `portrait artist ${state}`, `custom portrait ${state}`,
-    `birthday gift ${state}`, `portrait commission ${state}`,
+    `portrait artist ${country}`, `custom portrait ${country}`,
+    `birthday gift ${country}`, `portrait commission ${country}`,
+    `online portrait artist`, `worldwide portrait commission`, `ship portrait worldwide`,
     `_V_P_ARTS`, `Vaishnav Prabhakaran art`, `VP arts portrait`,
-    `pencil sketch gift India`, `affordable pencil drawing India`,
-    `personalized gift ${name}`, `unique birthday gift ${name}`,
-    `handmade portrait gift ${name}`, `gifting ideas ${name}`
+    `handmade portrait gift online`, `personalized portrait gift ${name}`,
+    `unique birthday gift ${name}`, `handmade portrait gift ${name}`, `gifting ideas ${name}`
   ].join(", ");
 
-  const desc = `Order a custom hand-drawn charcoal or pencil portrait from _V_P_ARTS — your local portrait artist serving ${name}, ${state}. Perfect birthday gift, anniversary gift, or memorial artwork. 100+ orders completed. Starting Rs.600. Pan-India shipping.`;
+  const shippingNote = intl
+    ? `Worldwide international shipping available. Payment via UPI, PayPal, or bank transfer. Shipping charges to ${name} apply.`
+    : `Pan-India shipping via courier to ${name}. Carefully packed with tracking.`;
+
+  const desc = `Order a custom hand-drawn charcoal or pencil portrait from _V_P_ARTS — online portrait commissions delivered worldwide to ${locationLabel}. Perfect birthday gift, anniversary gift, or memorial artwork. 100+ orders completed. Starting Rs.1,000. Worldwide shipping.`;
+
+  const waMsg = `Hi! I'm from ${name} and interested in a custom portrait commission.`;
+  const waHireMsg = `Hi! I'm from ${name} and I want to hire you as an artist.`;
 
   return `<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portrait Artist in ${name}, ${state} | Custom Charcoal &amp; Pencil Drawing — _V_P_ARTS</title>
+  <title>Portrait Artist in ${name}, ${country} | Custom Charcoal &amp; Pencil Drawing — _V_P_ARTS</title>
   <meta name="description" content="${desc}" />
+  <meta name="geo.region" content="${country}" />
+  <meta name="geo.placename" content="${name}" />
   <meta name="keywords" content="${keywords}" />
   <meta name="author" content="Vaishnav Prabhakaran — _V_P_ARTS" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -163,7 +236,7 @@ function generate(loc) {
   <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png?v=3" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="${url}" />
-  <meta property="og:title" content="Portrait Artist in ${name} | Custom Charcoal &amp; Pencil Drawing — _V_P_ARTS" />
+  <meta property="og:title" content="Portrait Artist in ${name}, ${country} | Custom Charcoal &amp; Pencil Drawing — _V_P_ARTS" />
   <meta property="og:description" content="${desc}" />
   <meta property="og:image" content="https://vaishnavprabhakaran.in/portrait3.jpg" />
   <meta property="twitter:card" content="summary_large_image" />
@@ -171,8 +244,8 @@ function generate(loc) {
   <meta property="twitter:title" content="Portrait Artist in ${name} | _V_P_ARTS" />
   <meta property="twitter:description" content="${desc}" />
   <meta property="twitter:image" content="https://vaishnavprabhakaran.in/portrait3.jpg" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"_V_P_ARTS — Portrait Artist in ${name}","image":"https://vaishnavprabhakaran.in/portrait3.jpg","url":"${url}","telephone":"+918078461246","description":"${desc}","address":{"@type":"PostalAddress","addressLocality":"${name}","addressRegion":"${state}","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":"${lat}","longitude":"${lng}"},"areaServed":[{"@type":"City","name":"${name}"},{"@type":"State","name":"${state}"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5","bestRating":"5","ratingCount":"100"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Portrait Commission Services in ${name}","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"A5 Charcoal Portrait in ${name} — Starting Rs.600"},"price":"600","priceCurrency":"INR"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"A4 Charcoal Portrait in ${name} — Starting Rs.1,000"},"price":"1000","priceCurrency":"INR"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"A3 Charcoal Portrait in ${name} — Starting Rs.1,500"},"price":"1500","priceCurrency":"INR"}]}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a custom charcoal portrait cost in ${name}?","acceptedAnswer":{"@type":"Answer","text":"Custom charcoal portraits by _V_P_ARTS start from Rs.600 for an A5 size (1 face). A4 portraits start from Rs.1,000. Frame add-ons and courier are extra. Ship to ${name}, ${state} pan-India."}},{"@type":"Question","name":"Can I order a portrait as a birthday gift in ${name}?","acceptedAnswer":{"@type":"Answer","text":"Yes! Custom charcoal portraits make a unique and personal birthday or anniversary gift for people in ${name}. We ship pan-India with tracking."}},{"@type":"Question","name":"How long does portrait delivery to ${name} take?","acceptedAnswer":{"@type":"Answer","text":"Artwork takes 5-10 working days. Courier to ${name}, ${state} typically takes 3-5 days after dispatch. Total turnaround is about 2 weeks."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"_V_P_ARTS — Portrait Artist in ${name}","image":"https://vaishnavprabhakaran.in/portrait3.jpg","url":"${url}","telephone":"+918078461246","description":"${desc}","address":{"@type":"PostalAddress","addressLocality":"${name}","addressRegion":"${state}","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":"${lat}","longitude":"${lng}"},"areaServed":[{"@type":"City","name":"${name}"},{"@type":"State","name":"${state}"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5","bestRating":"5","ratingCount":"100"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Portrait Commission Services in ${name}","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"A5 Charcoal Portrait — ship to ${name}"},"price":"600","priceCurrency":"INR"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"A4 Charcoal Portrait in ${name} — Starting Rs.1,000"},"price":"1000","priceCurrency":"INR"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"A3 Charcoal Portrait in ${name} — Starting Rs.1,500"},"price":"2000","priceCurrency":"INR"}]}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a custom charcoal portrait cost in ${name}?","acceptedAnswer":{"@type":"Answer","text":"Custom charcoal portraits by _V_P_ARTS start from Rs.1,000 for A5 (1 face), Rs.1,400 for A4 (max 2 faces), and Rs.2,000 for A3. Frame add-ons and shipping extra. Worldwide delivery available."}},{"@type":"Question","name":"Can I order a portrait as a birthday gift in ${name}?","acceptedAnswer":{"@type":"Answer","text":"Yes! Custom charcoal portraits make a unique and personal birthday or anniversary gift for people in ${name}. We ship worldwide including ${locationLabel}. Contact via WhatsApp for shipping rates."}},{"@type":"Question","name":"How long does portrait delivery to ${name} take?","acceptedAnswer":{"@type":"Answer","text":"Artwork takes 5-10 working days. ${intl ? "International shipping to " + name + " typically takes 7-15 days." : "Courier to " + name + " typically takes 3-5 days."} Total artwork time is 5-10 working days."}}]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
@@ -236,17 +309,20 @@ function generate(loc) {
     <div class="art-hero-inner">
       <div class="art-hero-badge art-fade-in" style="--d:0.05s">
         <span class="art-badge-dot"></span>
-        <span>Serving ${name}, ${state} — 100+ Orders Completed</span>
+        <span>Serving ${locationLabel} — 100+ Orders · Worldwide Shipping</span>
       </div>
       <h1 class="art-hero-title art-fade-in" style="--d:0.1s">
         Portrait Artist<br>in <em>${name}</em>
       </h1>
       <p class="art-hero-sub art-fade-in" style="--d:0.18s">
-        Custom hand-drawn charcoal &amp; pencil portraits — the perfect <strong>birthday gift</strong> or anniversary present for people in ${name}, ${state}. 100+ orders. Starting &#8377;600.
+        Custom hand-drawn charcoal &amp; pencil portraits — the perfect <strong>birthday gift</strong> or anniversary present. Delivered worldwide to ${locationLabel}. 100+ orders. Starting &#8377;1,000.
       </p>
       <div class="art-hero-actions art-fade-in" style="--d:0.24s">
-        <a href="https://wa.me/918078461246?text=Hi!%20I%27m%20from%20${encodeURIComponent(name)}%20and%20want%20a%20custom%20portrait." target="_blank" rel="noopener" class="art-btn-primary">
+        <a href="https://wa.me/918078461246?text=${encodeURIComponent(waMsg)}" target="_blank" rel="noopener" class="art-btn-primary">
           <i class="fab fa-whatsapp"></i> Order From ${name}
+        </a>
+        <a href="https://wa.me/918078461246?text=${encodeURIComponent(waHireMsg)}" target="_blank" rel="noopener" class="art-btn-hire">
+          <i class="fas fa-palette"></i> Hire Me as Artist
         </a>
         <a href="/art/#gallery" class="art-btn-ghost">View Gallery</a>
       </div>
@@ -267,10 +343,10 @@ function generate(loc) {
       <span class="art-ticker-item"><i class="fas fa-pencil"></i> Hand-Drawn &amp; 100% Original</span>
       <span class="art-ticker-item"><i class="fas fa-gift"></i> Perfect Birthday Gift</span>
       <span class="art-ticker-item"><i class="fas fa-heart"></i> Anniversary Portraits</span>
-      <span class="art-ticker-item"><i class="fas fa-truck"></i> Pan-India Shipping</span>
+      <span class="art-ticker-item"><i class="fas fa-globe"></i> Worldwide Shipping</span>
       <span class="art-ticker-item"><i class="fas fa-star"></i> 100+ Happy Customers</span>
-      <span class="art-ticker-item"><i class="fas fa-indian-rupee-sign"></i> Starting &#8377;600</span>
-      <span class="art-ticker-item"><i class="fas fa-shield-halved"></i> Your Privacy Protected</span>
+      <span class="art-ticker-item"><i class="fas fa-indian-rupee-sign"></i> Starting &#8377;1,000</span>
+      <span class="art-ticker-item"><i class="fas fa-palette"></i> Available for Hire Globally</span>
     </div>
   </div>
 
@@ -278,9 +354,9 @@ function generate(loc) {
   <section class="art-section" id="local">
     <div class="art-container">
       <div class="art-section-hd reveal-up">
-        <span class="art-label">Serving ${name}, ${state}</span>
+        <span class="art-label">Serving ${locationLabel}</span>
         <h2 class="art-heading">Custom Portraits <em>Delivered to ${name}</em></h2>
-        <p class="art-sub">_V_P_ARTS delivers hand-drawn charcoal &amp; pencil portraits pan-India including ${name}. Order a portrait as a birthday gift, anniversary present, or personal keepsake — courier delivered right to your door.</p>
+        <p class="art-sub">_V_P_ARTS delivers hand-drawn charcoal &amp; pencil portraits worldwide, including ${locationLabel}. Order a portrait as a birthday gift, anniversary present, or personal keepsake — courier delivered right to your door. ${shippingNote}</p>
       </div>
       <div class="art-gift-grid reveal-up" style="--delay:0.06s">
         <div class="art-gift-card">
@@ -295,13 +371,13 @@ function generate(loc) {
         </div>
         <div class="art-gift-card">
           <div class="art-gift-icon"><i class="fas fa-star"></i></div>
-          <h3>Affordable Art in ${state}</h3>
-          <p>High-quality realistic charcoal portraits starting from just &#8377;600 — affordable and accessible from ${name}.</p>
+          <h3>Worldwide Shipping</h3>
+          <p>Every artwork is carefully packed and shipped worldwide. ${intl ? 'International courier to ' + name + ' with full tracking.' : 'Pan-India courier to ' + name + ' with tracking.'}</p>
         </div>
         <div class="art-gift-card">
-          <div class="art-gift-icon"><i class="fas fa-truck"></i></div>
-          <h3>Pan-India Shipping</h3>
-          <p>Every portrait is carefully packed and courier-shipped with tracking. Delivery to ${name} in 3-5 days after completion.</p>
+          <div class="art-gift-icon"><i class="fas fa-palette"></i></div>
+          <h3>Hire Me as Artist</h3>
+          <p>Looking for an artist for events, live portrait sessions, exhibitions, or creative projects in ${name}? I'm available globally — let's create together!</p>
         </div>
       </div>
 
@@ -309,6 +385,7 @@ function generate(loc) {
       <div class="art-section-hd reveal-up" style="--delay:0.04s; margin-top:72px">
         <span class="art-label">Pricing for ${name}</span>
         <h2 class="art-heading">Simple, <em>Transparent</em> Pricing</h2>
+        <p class="art-sub">${intl ? 'All prices in INR. International shipping charges apply. Payment via UPI, PayPal, or bank transfer.' : 'No hidden charges. Courier charges are extra.'}</p>
       </div>
       <div class="art-pricing-grid">
         <!-- A5 Card -->
@@ -317,10 +394,10 @@ function generate(loc) {
           <h3 class="art-price-title">A5 Portrait <span class="art-price-limit">1 Face Only</span></h3>
           <div class="art-price-amount">
             <span class="art-price-from">Starting @</span>
-            <span class="art-price-val">&#8377;600</span>
+            <span class="art-price-val">&#8377;1,000</span>
           </div>
           <ul class="art-price-list">
-            <li><i class="fas fa-check"></i> 1 face — <strong>&#8377;600</strong></li>
+            <li><i class="fas fa-check"></i> 1 face — <strong>&#8377;1,000</strong></li>
             <li><i class="fas fa-ban"></i> Maximum 1 face per A5</li>
             <li><i class="fas fa-image"></i> Frame add-on — <strong>+&#8377;150</strong></li>
             <li><i class="fas fa-truck"></i> Courier to ${name} extra</li>
@@ -335,11 +412,11 @@ function generate(loc) {
           <h3 class="art-price-title">A4 Portrait <span class="art-price-limit">Max 2 Faces</span></h3>
           <div class="art-price-amount">
             <span class="art-price-from">Starting @</span>
-            <span class="art-price-val">&#8377;1,000</span>
+            <span class="art-price-val">&#8377;1,400</span>
           </div>
           <ul class="art-price-list">
-            <li><i class="fas fa-check"></i> 1 face — <strong>&#8377;1,000</strong></li>
-            <li><i class="fas fa-check"></i> 2 faces — <strong>&#8377;1,600</strong></li>
+            <li><i class="fas fa-check"></i> 1 face — <strong>&#8377;1,400</strong></li>
+            <li><i class="fas fa-check"></i> 2 faces — <strong>&#8377;2,200</strong></li>
             <li><i class="fas fa-image"></i> Frame add-on — <strong>+&#8377;250</strong></li>
             <li><i class="fas fa-truck"></i> Courier to ${name} extra</li>
             <li><i class="fas fa-gift"></i> Perfect birthday gift</li>
@@ -354,12 +431,12 @@ function generate(loc) {
           <h3 class="art-price-title">A3 Portrait</h3>
           <div class="art-price-amount">
             <span class="art-price-from">Starting @</span>
-            <span class="art-price-val">&#8377;1,500</span>
+            <span class="art-price-val">&#8377;2,000</span>
           </div>
           <ul class="art-price-list">
-            <li><i class="fas fa-check"></i> 1 face — <strong>&#8377;1,500</strong></li>
-            <li><i class="fas fa-check"></i> Each extra face — <strong>+&#8377;600</strong></li>
-            <li><i class="fas fa-calculator"></i> Formula: &#8377;600 &#215; faces*</li>
+            <li><i class="fas fa-check"></i> 1 face — <strong>&#8377;2,000</strong></li>
+            <li><i class="fas fa-check"></i> Each extra face — <strong>+&#8377;700</strong></li>
+            <li><i class="fas fa-calculator"></i> Formula: &#8377;2,000 + &#8377;700 per extra face</li>
             <li><i class="fas fa-image"></i> Frame add-on — <strong>+&#8377;500</strong></li>
             <li><i class="fas fa-truck"></i> Courier to ${name} extra</li>
             <li><i class="fas fa-gift"></i> Perfect anniversary gift</li>
@@ -370,7 +447,41 @@ function generate(loc) {
 
       <!-- Disclaimer -->
       <div class="art-price-disclaimer reveal-up" style="--delay:0.08s">
-        <strong>*Note:</strong> For all artwork sizes, additional work like custom backgrounds or adding extra elements will cost extra.
+        <strong>*Note:</strong> ${intl ? 'Prices in INR (Indian Rupees). International shipping charges extra. Contact via WhatsApp for international shipping quote to ' + name + '.' : 'Courier charges are extra. Additional custom elements cost extra.'}
+      </div>
+
+      <!-- HIRE AS ARTIST SECTION -->
+      <div class="art-section-hd reveal-up" style="--delay:0.04s; margin-top:72px">
+        <span class="art-label">Hire as Artist</span>
+        <h2 class="art-heading">Looking to <em>Hire an Artist?</em></h2>
+        <p class="art-sub">I am available for hire as a professional artist for events, live portrait sessions, exhibitions, corporate events, and creative collaborations from ${locationLabel} or anywhere in the world.</p>
+      </div>
+      <div class="art-gift-grid reveal-up" style="--delay:0.06s">
+        <div class="art-gift-card">
+          <div class="art-gift-icon"><i class="fas fa-paint-brush"></i></div>
+          <h3>Live Portrait Events</h3>
+          <p>Hire me for live portrait drawing at weddings, corporate events, parties, and exhibitions in ${name} or worldwide.</p>
+        </div>
+        <div class="art-gift-card">
+          <div class="art-gift-icon"><i class="fas fa-palette"></i></div>
+          <h3>Custom Commissions</h3>
+          <p>Bespoke artwork projects, murals, large-format commissions, and creative collaborations — for clients in ${name} and globally.</p>
+        </div>
+        <div class="art-gift-card">
+          <div class="art-gift-icon"><i class="fas fa-globe"></i></div>
+          <h3>International Projects</h3>
+          <p>Available for international art residencies, collaborative projects, and remote commissions from anywhere in the world.</p>
+        </div>
+        <div class="art-gift-card">
+          <div class="art-gift-icon"><i class="fas fa-handshake"></i></div>
+          <h3>Flexible Engagement</h3>
+          <p>Full-time event hire, part-time projects, or one-off commissions. Let's discuss your needs and create something extraordinary.</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:36px" class="reveal-up" style="--delay:0.08s">
+        <a href="https://wa.me/918078461246?text=${encodeURIComponent(waHireMsg)}" target="_blank" rel="noopener" class="art-btn-primary" style="display:inline-flex;">
+          <i class="fab fa-whatsapp"></i> Enquire About Hiring Me
+        </a>
       </div>
 
       <!-- ═══ ABOUT ARTIST ═══ -->
@@ -396,11 +507,11 @@ function generate(loc) {
         <div class="art-cta-inner">
           <span class="art-label">Order from ${name}</span>
           <h2 class="art-cta-title">Ready for Your<br><em>Custom Portrait?</em></h2>
-          <p class="art-cta-sub">WhatsApp me your reference photo — I will reply with a quote within a few hours. Delivery to ${name} included.</p>
-          <a href="https://wa.me/918078461246?text=Hi%20Vaishnav!%20I%27m%20from%20${encodeURIComponent(name)}%20and%20want%20a%20custom%20charcoal%20portrait." target="_blank" rel="noopener" class="art-cta-btn">
+          <p class="art-cta-sub">WhatsApp me your reference photo — I will reply with a quote within a few hours. ${intl ? 'Worldwide shipping to ' + name + ' available.' : 'Delivery to ' + name + ' included.'}</p>
+          <a href="https://wa.me/918078461246?text=${encodeURIComponent(waMsg)}" target="_blank" rel="noopener" class="art-cta-btn">
             <i class="fab fa-whatsapp"></i> Order from ${name} on WhatsApp
           </a>
-          <p class="art-cta-note">Pan-India shipping &#183; 100+ satisfied customers &#183; Starting &#8377;600</p>
+          <p class="art-cta-note">Worldwide shipping &#183; 100+ satisfied customers &#183; Starting &#8377;1,000</p>
         </div>
       </div>
     </div>
@@ -411,7 +522,7 @@ function generate(loc) {
       <div class="art-footer-top">
         <div class="art-footer-brand">
           <span class="art-logo-mark" style="font-weight:800;font-size:1.05rem">_V_P_ARTS</span>
-          <p>Custom Charcoal &amp; Pencil Portrait Artist serving ${name}, ${state} and all of South India</p>
+          <p>Custom Charcoal &amp; Pencil Portrait Artist — Worldwide Online Commissions</p>
         </div>
         <nav class="art-footer-nav">
           <a href="/art/">Home</a>
@@ -426,9 +537,9 @@ function generate(loc) {
         </div>
       </div>
       <div class="art-footer-div"></div>
-      <div class="art-footer-btm"><p>&#169; 2026 _V_P_ARTS by Vaishnav Prabhakaran. Portrait Artist in ${name}, ${state}.</p></div>
+      <div class="art-footer-btm"><p>&#169; 2026 _V_P_ARTS by Vaishnav Prabhakaran. Online Portrait Artist — Serving ${locationLabel} &amp; Worldwide.</p></div>
       <div class="art-footer-seo">
-        <p class="art-footer-seo-title">Custom Portrait Artist across Kerala, Karnataka &amp; Tamil Nadu</p>
+        <p class="art-footer-seo-title">Custom Portrait Artist — Worldwide Online Commissions &amp; Shipping</p>
         <p class="art-footer-seo-links">${SEO_FOOTER}</p>
       </div>
     </div>
