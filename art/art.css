@@ -260,11 +260,12 @@ body[data-theme="light"] .art-theme-btn .icon-moon { display: none; }
 .art-btn-primary:hover { background: var(--accent); color: #fff; transform: scale(1.04); box-shadow: 0 12px 32px var(--accent-glow); }
 .art-btn-primary i { font-size: 1.1rem; }
 .art-btn-ghost {
-  display: inline-flex; align-items: center; padding: 13px 26px;
+  display: inline-flex; align-items: center; gap: 9px; padding: 13px 26px;
   background: transparent; color: var(--fg); border: 1.5px solid var(--border2);
   border-radius: 100px; font-size: 0.96rem; font-weight: 500;
   transition: background .25s var(--ease), border-color .25s, transform .25s var(--ease);
 }
+.art-btn-ghost i { font-size: 1rem; color: inherit; }
 .art-btn-ghost:hover { background: var(--fg); color: var(--bg); border-color: var(--fg); transform: scale(1.02); }
 
 .art-hero-stats { display: flex; align-items: center; flex-wrap: wrap; }
@@ -886,7 +887,7 @@ body[data-theme="dark"]  { --sheen-color: rgba(255,255,255,.09); }
 }
 
 /* ═══════════════════════════════════════════════════════
-   HIRE BUTTON (NAV + HERO) — Matches Theme Accent
+   HIRE BUTTON (NAV + HERO) | Matches Theme Accent
 ═══════════════════════════════════════════════════════ */
 :root, body[data-theme="light"] {
   --hire: #4F46E5;

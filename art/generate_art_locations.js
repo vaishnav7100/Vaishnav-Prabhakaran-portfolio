@@ -213,7 +213,7 @@ function generate(loc) {
     ? `Worldwide international shipping available. Payment via UPI, PayPal, or bank transfer. Shipping charges to ${name} apply.`
     : `Pan-India shipping via courier to ${name}. Carefully packed with tracking.`;
 
-  const desc = `Order a custom hand-drawn charcoal or pencil portrait from _V_P_ARTS — online portrait commissions delivered worldwide to ${locationLabel}. Perfect birthday gift, anniversary gift, or memorial artwork. 100+ orders completed. Starting Rs.1,000. Worldwide shipping.`;
+  const desc = `Order a custom hand-drawn charcoal or pencil portrait from _V_P_ARTS. Online portrait commissions delivered worldwide to ${locationLabel}. Perfect birthday gift, anniversary gift, or memorial artwork. 100+ orders completed. Starting Rs.1,000. Worldwide shipping.`;
 
   const waMsg = `Hi! I'm from ${name} and interested in a custom portrait commission.`;
   const waHireMsg = `Hi! I'm from ${name} and I want to hire you as an artist.`;
@@ -223,12 +223,12 @@ function generate(loc) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portrait Artist in ${name}, ${country} | Custom Charcoal &amp; Pencil Drawing — _V_P_ARTS</title>
+  <title>Portrait Artist in ${name}, ${country} | Custom Charcoal &amp; Pencil Drawing | _V_P_ARTS</title>
   <meta name="description" content="${desc}" />
   <meta name="geo.region" content="${country}" />
   <meta name="geo.placename" content="${name}" />
   <meta name="keywords" content="${keywords}" />
-  <meta name="author" content="Vaishnav Prabhakaran — _V_P_ARTS" />
+  <meta name="author" content="Vaishnav Prabhakaran (_V_P_ARTS)" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="canonical" href="${url}" />
   <link rel="icon" type="image/svg+xml" href="../../favicon.svg?v=3" />
@@ -236,7 +236,7 @@ function generate(loc) {
   <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png?v=3" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="${url}" />
-  <meta property="og:title" content="Portrait Artist in ${name}, ${country} | Custom Charcoal &amp; Pencil Drawing — _V_P_ARTS" />
+  <meta property="og:title" content="Portrait Artist in ${name}, ${country} | Custom Charcoal &amp; Pencil Drawing | _V_P_ARTS" />
   <meta property="og:description" content="${desc}" />
   <meta property="og:image" content="https://vaishnavprabhakaran.in/portrait3.jpg" />
   <meta property="twitter:card" content="summary_large_image" />
@@ -244,7 +244,7 @@ function generate(loc) {
   <meta property="twitter:title" content="Portrait Artist in ${name} | _V_P_ARTS" />
   <meta property="twitter:description" content="${desc}" />
   <meta property="twitter:image" content="https://vaishnavprabhakaran.in/portrait3.jpg" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"_V_P_ARTS — Portrait Artist in ${name}","image":"https://vaishnavprabhakaran.in/portrait3.jpg","url":"${url}","telephone":"+918078461246","description":"${desc}","address":{"@type":"PostalAddress","addressLocality":"${name}","addressRegion":"${state}","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":"${lat}","longitude":"${lng}"},"areaServed":[{"@type":"City","name":"${name}"},{"@type":"State","name":"${state}"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5","bestRating":"5","ratingCount":"100"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Portrait Commission Services in ${name}","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"A5 Charcoal Portrait — ship to ${name}"},"price":"600","priceCurrency":"INR"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"A4 Charcoal Portrait in ${name} — Starting Rs.1,000"},"price":"1000","priceCurrency":"INR"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"A3 Charcoal Portrait in ${name} — Starting Rs.1,500"},"price":"2000","priceCurrency":"INR"}]}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"_V_P_ARTS | Portrait Artist in ${name}","image":"https://vaishnavprabhakaran.in/portrait3.jpg","url":"${url}","telephone":"+918078461246","description":"${desc}","address":{"@type":"PostalAddress","addressLocality":"${name}","addressRegion":"${state}","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":"${lat}","longitude":"${lng}"},"areaServed":[{"@type":"City","name":"${name}"},{"@type":"State","name":"${state}"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5","bestRating":"5","ratingCount":"100"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Portrait Commission Services in ${name}","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"A5 Charcoal Portrait: ship to ${name}"},"price":"1000","priceCurrency":"INR"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"A4 Charcoal Portrait in ${name}: Starting Rs.1,400"},"price":"1400","priceCurrency":"INR"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"A3 Charcoal Portrait in ${name}: Starting Rs.2,000"},"price":"2000","priceCurrency":"INR"}]}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does a custom charcoal portrait cost in ${name}?","acceptedAnswer":{"@type":"Answer","text":"Custom charcoal portraits by _V_P_ARTS start from Rs.1,000 for A5 (1 face), Rs.1,400 for A4 (max 2 faces), and Rs.2,000 for A3. Frame add-ons and shipping extra. Worldwide delivery available."}},{"@type":"Question","name":"Can I order a portrait as a birthday gift in ${name}?","acceptedAnswer":{"@type":"Answer","text":"Yes! Custom charcoal portraits make a unique and personal birthday or anniversary gift for people in ${name}. We ship worldwide including ${locationLabel}. Contact via WhatsApp for shipping rates."}},{"@type":"Question","name":"How long does portrait delivery to ${name} take?","acceptedAnswer":{"@type":"Answer","text":"Artwork takes 5-10 working days. ${intl ? "International shipping to " + name + " typically takes 7-15 days." : "Courier to " + name + " typically takes 3-5 days."} Total artwork time is 5-10 working days."}}]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -309,13 +309,13 @@ function generate(loc) {
     <div class="art-hero-inner">
       <div class="art-hero-badge art-fade-in" style="--d:0.05s">
         <span class="art-badge-dot"></span>
-        <span>Serving ${locationLabel} — 100+ Orders · Worldwide Shipping</span>
+        <span>Serving ${locationLabel} · 100+ Orders · Worldwide Shipping</span>
       </div>
       <h1 class="art-hero-title art-fade-in" style="--d:0.1s">
         Portrait Artist<br>in <em>${name}</em>
       </h1>
       <p class="art-hero-sub art-fade-in" style="--d:0.18s">
-        Custom hand-drawn charcoal &amp; pencil portraits — the perfect <strong>birthday gift</strong> or anniversary present. Delivered worldwide to ${locationLabel}. 100+ orders. Starting &#8377;1,000.
+        Custom hand-drawn charcoal &amp; pencil portraits for the perfect <strong>birthday gift</strong> or anniversary present. Delivered worldwide to ${locationLabel}. 100+ orders. Starting &#8377;1,000.
       </p>
       <div class="art-hero-actions art-fade-in" style="--d:0.24s">
         <a href="https://wa.me/918078461246?text=${encodeURIComponent(waMsg)}" target="_blank" rel="noopener" class="art-btn-primary">
@@ -356,13 +356,13 @@ function generate(loc) {
       <div class="art-section-hd reveal-up">
         <span class="art-label">Serving ${locationLabel}</span>
         <h2 class="art-heading">Custom Portraits <em>Delivered to ${name}</em></h2>
-        <p class="art-sub">_V_P_ARTS delivers hand-drawn charcoal &amp; pencil portraits worldwide, including ${locationLabel}. Order a portrait as a birthday gift, anniversary present, or personal keepsake — courier delivered right to your door. ${shippingNote}</p>
+        <p class="art-sub">_V_P_ARTS delivers hand-drawn charcoal &amp; pencil portraits worldwide, including ${locationLabel}. Order a portrait as a birthday gift, anniversary present, or personal keepsake, courier delivered right to your door. ${shippingNote}</p>
       </div>
       <div class="art-gift-grid reveal-up" style="--delay:0.06s">
         <div class="art-gift-card">
           <div class="art-gift-icon"><i class="fas fa-cake-candles"></i></div>
           <h3>Birthday Gift in ${name}</h3>
-          <p>Surprise someone in ${name} with a beautiful hand-drawn charcoal portrait — a truly unique and personal birthday gift.</p>
+          <p>Surprise someone in ${name} with a beautiful hand-drawn charcoal portrait for a truly unique and personal birthday gift.</p>
         </div>
         <div class="art-gift-card">
           <div class="art-gift-icon"><i class="fas fa-heart"></i></div>
@@ -377,7 +377,7 @@ function generate(loc) {
         <div class="art-gift-card">
           <div class="art-gift-icon"><i class="fas fa-palette"></i></div>
           <h3>Hire Me as Artist</h3>
-          <p>Looking for an artist for events, live portrait sessions, exhibitions, or creative projects in ${name}? I'm available globally — let's create together!</p>
+          <p>Looking for an artist for events, live portrait sessions, exhibitions, or creative projects in ${name}? I'm available globally. Let's create together!</p>
         </div>
       </div>
 
@@ -397,9 +397,9 @@ function generate(loc) {
             <span class="art-price-val">&#8377;1,000</span>
           </div>
           <ul class="art-price-list">
-            <li><i class="fas fa-check"></i> 1 face — <strong>&#8377;1,000</strong></li>
+            <li><i class="fas fa-check"></i> 1 face: <strong>&#8377;1,000</strong></li>
             <li><i class="fas fa-ban"></i> Maximum 1 face per A5</li>
-            <li><i class="fas fa-image"></i> Frame add-on — <strong>+&#8377;150</strong></li>
+            <li><i class="fas fa-image"></i> Frame add-on: <strong>+&#8377;150</strong></li>
             <li><i class="fas fa-truck"></i> Courier to ${name} extra</li>
             <li><i class="fas fa-gift"></i> Perfect compact gift</li>
           </ul>
@@ -415,9 +415,9 @@ function generate(loc) {
             <span class="art-price-val">&#8377;1,400</span>
           </div>
           <ul class="art-price-list">
-            <li><i class="fas fa-check"></i> 1 face — <strong>&#8377;1,400</strong></li>
-            <li><i class="fas fa-check"></i> 2 faces — <strong>&#8377;2,200</strong></li>
-            <li><i class="fas fa-image"></i> Frame add-on — <strong>+&#8377;250</strong></li>
+            <li><i class="fas fa-check"></i> 1 face: <strong>&#8377;1,400</strong></li>
+            <li><i class="fas fa-check"></i> 2 faces: <strong>&#8377;2,200</strong></li>
+            <li><i class="fas fa-image"></i> Frame add-on: <strong>+&#8377;250</strong></li>
             <li><i class="fas fa-truck"></i> Courier to ${name} extra</li>
             <li><i class="fas fa-gift"></i> Perfect birthday gift</li>
           </ul>
@@ -434,10 +434,10 @@ function generate(loc) {
             <span class="art-price-val">&#8377;2,000</span>
           </div>
           <ul class="art-price-list">
-            <li><i class="fas fa-check"></i> 1 face — <strong>&#8377;2,000</strong></li>
-            <li><i class="fas fa-check"></i> Each extra face — <strong>+&#8377;700</strong></li>
+            <li><i class="fas fa-check"></i> 1 face: <strong>&#8377;2,000</strong></li>
+            <li><i class="fas fa-check"></i> Each extra face: <strong>+&#8377;700</strong></li>
             <li><i class="fas fa-calculator"></i> Formula: &#8377;2,000 + &#8377;700 per extra face</li>
-            <li><i class="fas fa-image"></i> Frame add-on — <strong>+&#8377;500</strong></li>
+            <li><i class="fas fa-image"></i> Frame add-on: <strong>+&#8377;500</strong></li>
             <li><i class="fas fa-truck"></i> Courier to ${name} extra</li>
             <li><i class="fas fa-gift"></i> Perfect anniversary gift</li>
           </ul>
@@ -465,7 +465,7 @@ function generate(loc) {
         <div class="art-gift-card">
           <div class="art-gift-icon"><i class="fas fa-palette"></i></div>
           <h3>Custom Commissions</h3>
-          <p>Bespoke artwork projects, murals, large-format commissions, and creative collaborations — for clients in ${name} and globally.</p>
+          <p>Bespoke artwork projects, murals, large-format commissions, and creative collaborations for clients in ${name} and globally.</p>
         </div>
         <div class="art-gift-card">
           <div class="art-gift-icon"><i class="fas fa-globe"></i></div>
@@ -507,7 +507,7 @@ function generate(loc) {
         <div class="art-cta-inner">
           <span class="art-label">Order from ${name}</span>
           <h2 class="art-cta-title">Ready for Your<br><em>Custom Portrait?</em></h2>
-          <p class="art-cta-sub">WhatsApp me your reference photo — I will reply with a quote within a few hours. ${intl ? 'Worldwide shipping to ' + name + ' available.' : 'Delivery to ' + name + ' included.'}</p>
+          <p class="art-cta-sub">WhatsApp me your reference photo and I will reply with a quote within a few hours. ${intl ? 'Worldwide shipping to ' + name + ' available.' : 'Delivery to ' + name + ' included.'}</p>
           <a href="https://wa.me/918078461246?text=${encodeURIComponent(waMsg)}" target="_blank" rel="noopener" class="art-cta-btn">
             <i class="fab fa-whatsapp"></i> Order from ${name} on WhatsApp
           </a>
@@ -522,7 +522,7 @@ function generate(loc) {
       <div class="art-footer-top">
         <div class="art-footer-brand">
           <span class="art-logo-mark" style="font-weight:800;font-size:1.05rem">_V_P_ARTS</span>
-          <p>Custom Charcoal &amp; Pencil Portrait Artist — Worldwide Online Commissions</p>
+          <p>Custom Charcoal &amp; Pencil Portrait Artist | Worldwide Online Commissions</p>
         </div>
         <nav class="art-footer-nav">
           <a href="/art/">Home</a>
@@ -537,9 +537,9 @@ function generate(loc) {
         </div>
       </div>
       <div class="art-footer-div"></div>
-      <div class="art-footer-btm"><p>&#169; 2026 _V_P_ARTS by Vaishnav Prabhakaran. Online Portrait Artist — Serving ${locationLabel} &amp; Worldwide.</p></div>
+      <div class="art-footer-btm"><p>&#169; 2026 _V_P_ARTS by Vaishnav Prabhakaran. Online Portrait Artist | Serving ${locationLabel} &amp; Worldwide.</p></div>
       <div class="art-footer-seo">
-        <p class="art-footer-seo-title">Custom Portrait Artist — Worldwide Online Commissions &amp; Shipping</p>
+        <p class="art-footer-seo-title">Custom Portrait Artist | Worldwide Online Commissions &amp; Shipping</p>
         <p class="art-footer-seo-links">${SEO_FOOTER}</p>
       </div>
     </div>
