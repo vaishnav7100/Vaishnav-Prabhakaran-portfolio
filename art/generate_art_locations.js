@@ -525,3 +525,14 @@ for (const loc of LOCATIONS) {
   count++;
 }
 console.log(`Generated ${count} art location pages in ${OUTPUT_DIR}`);
+
+// Automatically rebuild unified sitemap
+const { execSync } = require('child_process');
+try {
+  const sitemapScript = path.join(__dirname, '..', 'generate_sitemap.js');
+  if (fs.existsSync(sitemapScript)) {
+    execSync(`node "${sitemapScript}"`, { stdio: 'inherit' });
+  }
+} catch (e) {
+  console.warn('Could not auto-update sitemap:', e.message);
+}

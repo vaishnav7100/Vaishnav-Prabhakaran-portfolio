@@ -497,12 +497,16 @@ UNIQUE_LOCATIONS.forEach(location => {
     pageCount++;
 });
 
-// Write clean sitemap from scratch
-const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${sitemapUrls.join('')}
-</urlset>`;
-
-fs.writeFileSync(SITEMAP_PATH, sitemapContent);
+// Rebuild unified sitemap (both tech and art pages)
+const { execSync } = require('child_process');
+try {
+  const sitemapScript = path.join(__dirname, 'generate_sitemap.js');
+  if (fs.existsSync(sitemapScript)) {
+    execSync(`node "${sitemapScript}"`, { stdio: 'inherit' });
+  }
+} catch (e) {
+  console.warn('Could not auto-update sitemap:', e.message);
+}
 
 console.log(`\n🎉 Success! Generated ${pageCount} location pages for Kerala, Karnataka & Tamil Nadu.`);
 console.log(`📊 Sitemap rebuilt with ${sitemapUrls.length} unique URLs (1 homepage + ${pageCount} location pages).`);
