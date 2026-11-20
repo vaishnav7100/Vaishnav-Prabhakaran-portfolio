@@ -231,7 +231,7 @@ function generateLocationContent(location) {
 
           <h3 class="location-services-title">Why Work With Me as Your App Developer in ${location}?</h3>
           <ul class="location-why-list">
-            <li><i class="fas fa-check-circle"></i> <strong>10+ apps built</strong> — Published on Google Play Store with real users</li>
+            <li><i class="fas fa-check-circle"></i> <strong>5+ apps built</strong> — Published on Google Play Store with real users</li>
             <li><i class="fas fa-check-circle"></i> <strong>100% client satisfaction</strong> — On-time delivery, clean code, ongoing support</li>
             <li><i class="fas fa-check-circle"></i> <strong>Cross-platform expertise</strong> — Single codebase for Android + iOS with Flutter</li>
             <li><i class="fas fa-check-circle"></i> <strong>Serving ${region}</strong> — Available for projects in ${location} and across ${region}, Kerala, Karnataka & Tamil Nadu</li>
@@ -258,7 +258,7 @@ function generateLocationContent(location) {
             </details>
             <details>
               <summary>Are you the best Flutter developer near me in ${location}?</summary>
-              <p>I'm a top-rated Flutter developer serving ${location}, ${region}. With 10+ published apps, expertise in Flutter, Dart, Next.js, and AI integration — I deliver premium mobile and web solutions. Check my portfolio and client reviews above.</p>
+              <p>I'm a top-rated Flutter developer serving ${location}, ${region}. With 5+ published apps, expertise in Flutter, Dart, Next.js, and AI integration — I deliver premium mobile and web solutions. Check my portfolio and client reviews above.</p>
             </details>
           </div>
           <div class="location-cta glass-card">
@@ -345,7 +345,7 @@ function generateLocationSchema(location, pageUrl) {
           "name": "How do I hire a Flutter developer in ${location}?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Vaishnav Prabhakaran is a freelance Flutter developer serving ${location}, ${region}. With 10+ published apps, expertise in Flutter, Dart, Next.js, and AI integration, he builds mobile and web solutions for businesses in ${location}. Reach out via the contact form or WhatsApp."
+            "text": "Vaishnav Prabhakaran is a freelance Flutter developer serving ${location}, ${region}. With 5+ published apps, expertise in Flutter, Dart, Next.js, and AI integration, he builds mobile and web solutions for businesses in ${location}. Reach out via the contact form or WhatsApp."
           }
         },
         {
@@ -411,7 +411,7 @@ UNIQUE_LOCATIONS.forEach(location => {
     pageContent = pageContent.replace(/<title>.*<\/title>/, `<title>${title}</title>`);
 
     // 2. Update Meta Description — compelling, "near me" CTA-driven
-    const description = `Flutter and mobile app developer in ${location}. I'm Vaishnav Prabhakaran \u2014 a freelance Flutter, Android, iOS & web developer based in Kerala, available for projects in ${location}, ${region}. 10+ apps built. Get in touch!`;
+    const description = `Flutter and mobile app developer in ${location}. I'm Vaishnav Prabhakaran \u2014 a freelance Flutter, Android, iOS & web developer based in Kerala, available for projects in ${location}, ${region}. 5+ apps built. Get in touch!`;
     pageContent = pageContent.replace(/<meta name="description"\s*\n?\s*content=".*?" \/>/, `<meta name="description"\n    content="${description}" />`);
 
     // 3. Update Keywords — heavy "near me" + location-specific
